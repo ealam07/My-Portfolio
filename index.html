@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ehtesham Alam | UI/UX Designer</title>
+
+    <!-- SEO / Social (examples) -->
+    <meta name="description" content="Short page description" />
+    <meta property="og:title" content="Page title for social" />
+    <meta property="og:description" content="Description for social" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+
+    <div class="blob"></div>
+    <!-- <div class="h-screen w-full px-20"> -->
+    <div class="xl:container mx-auto px-20">
+
+        <!-- Header Start -->
+        <div class="w-full">
+            <div class="bg-transparent">
+                <div class="container mx-auto">
+                    <div class="flex items-center justify-between py-4">
+                        <div>
+                            <a href='./'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21"
+                                    fill="none">
+                                    <path
+                                        d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
+                                        fill="#FF00F2" />
+                                    <path
+                                        d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="hidden sm:flex sm:items-center menu-items">
+                            <a href="#hero"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Home</a>
+                            <a href="#experience"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Experience</a>
+                            <a href="#skills"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Skills</a>
+                            <a href="#portfolio"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Portfolio</a>
+                            <a href="#"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Education</a>
+                            <a href="#"
+                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)]">About</a>
+                        </div>
+
+                        <div class="hidden sm:flex sm:items-center">
+                            <a href="#" class="text-white text-sm font-semibold mr-4 px-6 py-3 rounded-lg bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]
+                                ">Contact Me</a>
+                            <a href="#" class="relative inline-block p-[1px] rounded-lg 
+                                        bg-[linear-gradient(270deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
+                                <span class="block bg-black hover:bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)] 
+                                        text-white text-sm font-semibold px-[23px] py-[11px] rounded-lg">
+                                    Resume
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="sm:hidden cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12.9499909,17 C12.7183558,18.1411202 11.709479,19 10.5,19 C9.29052104,19 8.28164422,18.1411202 8.05000906,17 L3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L8.05000906,16 C8.28164422,14.8588798 9.29052104,14 10.5,14 C11.709479,14 12.7183558,14.8588798 12.9499909,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 L12.9499909,17 Z M18.9499909,12 C18.7183558,13.1411202 17.709479,14 16.5,14 C15.290521,14 14.2816442,13.1411202 14.0500091,12 L3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L14.0500091,11 C14.2816442,9.85887984 15.290521,9 16.5,9 C17.709479,9 18.7183558,9.85887984 18.9499909,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L18.9499909,12 Z M9.94999094,7 C9.71835578,8.14112016 8.70947896,9 7.5,9 C6.29052104,9 5.28164422,8.14112016 5.05000906,7 L3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L5.05000906,6 C5.28164422,4.85887984 6.29052104,4 7.5,4 C8.70947896,4 9.71835578,4.85887984 9.94999094,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L9.94999094,7 Z M7.5,8 C8.32842712,8 9,7.32842712 9,6.5 C9,5.67157288 8.32842712,5 7.5,5 C6.67157288,5 6,5.67157288 6,6.5 C6,7.32842712 6.67157288,8 7.5,8 Z M16.5,13 C17.3284271,13 18,12.3284271 18,11.5 C18,10.6715729 17.3284271,10 16.5,10 C15.6715729,10 15,10.6715729 15,11.5 C15,12.3284271 15.6715729,13 16.5,13 Z M10.5,18 C11.3284271,18 12,17.3284271 12,16.5 C12,15.6715729 11.3284271,15 10.5,15 C9.67157288,15 9,15.6715729 9,16.5 C9,17.3284271 9.67157288,18 10.5,18 Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="block sm:hidden bg-white border-t-2 py-2">
+                        <div class="flex flex-col">
+                            <a href="#"
+                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Products</a>
+                            <a href="#"
+                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Marketplace</a>
+                            <a href="#"
+                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Partners</a>
+                            <a href="#"
+                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Pricing</a>
+                            <div class="flex justify-between items-center border-t-2 pt-2">
+                                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign
+                                    in</a>
+                                <a href="#"
+                                    class="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign
+                                    up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </div>
+    <div id="hero" class="xl:container mx-auto px-20 border-b-[3px] border-transparent"
+        style="border-image: linear-gradient(90deg, rgba(17,0,255,0.8), rgba(255,0,242,0.6)) 1;">
+        <div class="hero-section py-15 border-b-[3px] border-transparent">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-7">
+                    <div class="space-y-4">
+
+                        <h1 class="text-white text-6xl font-bold">
+                            <div class="flex items-center gap-3">
+                                <img src='./assets/images/hey.svg' />
+                                I<span class="text-[var(--primary-color)]">’</span>m
+                            </div>
+                            <span class="text-white">
+                                Ehtesham Alam
+                            </span>
+                        </h1>
+
+                        <div
+                            class="h-[1px] w-60 bg-gradient-to-r from-[var(--secondary-color)] to-[var(--primary-color)] my-18">
+                        </div>
+
+                        <h3 class="text-gray-300 text-4xl font-light leading-14">
+                            UI/UX Designer <span class="text-pink-500">&</span><br /> Frontend Developer
+                        </h3>
+
+                        <div class="flex gap-4 pt-6">
+                            <a href="#" class="text-white text-sm font-semibold px-6 py-3 rounded-lg
+                    bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
+                                Hire Me
+                            </a>
+
+                            <a href="#" class="relative inline-block p-[1px] rounded-lg 
+                    bg-[linear-gradient(270deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
+                                <span class="block bg-black hover:bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]
+                      text-white text-sm font-semibold px-6 py-3 rounded-lg">
+                                    Check Skills
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-5 relative">
+                    <img class="w-full" src='./assets/images/hero_img.svg' />
+                    <h6
+                        class="text-3xl total_experience rotate-270 absolute top-18 left-2 text-white font-bold text-right tracking-wider">
+                        <span class="text-[var(--primary-color)]">3+</span> Years<span
+                            class="text-lg font-normal block">Experince</span>
+                    </h6>
+                    <div class="flex flex-col justify-between gap-2 absolute bottom-2 left-2">
+                        <a href="#">
+                            <img src="./assets/images/Linkedin.svg">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/images/Naukri.svg">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/images/Facebook.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="experience" class="xl:container mx-auto p-20 relative">
+        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
+        <div class="flex justify-end">
+            <img src="./assets/images/sectionHeadings/Experience.svg">
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 w-full py-20">
+
+            <div class="col-span-1"></div>
+
+            <div class="col-span-5 relative">
+                <!-- Hexagon -->
+                <div class="absolute top-4 right-10">
+                    <div class="relative w-full h-full">
+                        <div class="absolute left-0 top-0 w-[28px] h-[24px] bg-[#FF00F2]/30 clip-hex"></div>
+                        <div class="absolute left-[5px] top-[4px] w-[18px] h-[16px] bg-[#FF00F2] clip-hex"></div>
+                    </div>
+                </div>
+
+                <img class="absolute top-0 left-0 w-full z-10" src="./assets/images/exp_card.svg">
+                <div class="p-12 z-20 relative">
+                    <h5 class="text-[var(--primary-color)] text-center text-xl">Technoarray Web Solutions</h5>
+                    <div class="text-md text-white flex justify-center items-center my-8">
+                        Web Designer
+                        <span
+                            class="w-2 h-2 rounded-full bg-[linear-gradient(to_right,rgba(17,0,255,0.8),rgba(255,0,242,0.6))] mx-4"></span>
+                        May 2022 – July 2025
+                    </div>
+                    <p class="text-white/60 text-center text-md">At Technoarray, I designed user-friendly web
+                        interfaces, working with developers and product managers to meet project goals. I used Figma to
+                        create wireframes and prototypes, conducted user testing, and refined designs based on feedback.
+                        I also built responsive layouts with HTML, CSS And Bootstrap, ensuring cross-browser
+                        compatibility and device optimization while following the latest UI/UX trends.</p>
+                </div>
+            </div>
+            <div class="col-span-5 relative">
+                <div class="h-1 w-22 bg-[#FF00F2]/10 absolute left-[-60px] top-[26px]"></div>
+                <!-- Hexagon -->
+                <div class="absolute top-4 left-4">
+                    <div class="relative w-full h-full">
+                        <div class="absolute left-0 top-0 w-[28px] h-[24px] bg-[#FF00F2]/30 clip-hex"></div>
+                        <div class="absolute left-[5px] top-[4px] w-[18px] h-[16px] bg-[#FF00F2] clip-hex"></div>
+                    </div>
+                </div>
+                <img class="absolute top-0 left-0 w-full scale-x-[-1] z-10" src="./assets/images/exp_card.svg">
+                <div class="p-12 z-20 relative">
+                    <h5 class="text-[var(--primary-color)] text-center text-xl">Anteriad</h5>
+                    <div class="text-md text-white flex justify-center items-center my-8">
+                        Web Designer
+                        <span
+                            class="w-2 h-2 rounded-full bg-[linear-gradient(to_right,rgba(17,0,255,0.8),rgba(255,0,242,0.6))] mx-4"></span>
+                        July 2025 – Present
+                    </div>
+                    <p class="text-white/60 text-center text-md">At Anteriad, I focus on UI/UX design and front-end
+                        development. I designed the complete UI for platforms like Infowatch Daily and TechVersions,
+                        creating mockups that align with user needs and brand identity. Alongside design, I also worked
+                        on a React-based dashboard project, building front-end interfaces for blogs and resource
+                        websites with responsive and interactive components.</p>
+                </div>
+            </div>
+
+            <div class="col-span-1"></div>
+
+        </div>
+
+    </div>
+    <div id="skills" class="xl:container mx-auto p-20 pt-0 relative">
+        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
+        <div class="flex justify-start">
+            <img src="./assets/images/sectionHeadings/Skills.svg">
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 w-full py-20">
+
+            <div class="col-span-3">
+                <ul class="space-y-6">
+                    <li>
+                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
+               border-l-4 text-pink-500 border-pink-500 hover:text-pink-500 hover:border-pink-500" data-tab="uiux">
+                            UI / UX
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
+               border-l-4 border-transparent text-white
+               hover:text-pink-500 hover:border-pink-500 transition" data-tab="frontend">
+                            Frontend
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
+               border-l-4 border-transparent text-white
+               hover:text-pink-500 hover:border-pink-500 transition" data-tab="tools">
+                            Tools
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-span-9">
+                <div id="uiux" class="tab-content grid grid-cols-12 gap-8 w-full">
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/visual-design.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Visual Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/wireframing.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Wireframing</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/prototyping.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Prototyping</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/mockup-design.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Mockup Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">UX Research</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/ab-testing.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">A/B Testing</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/ui-ux/mobile-app-design.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Mobile App Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="frontend" class="tab-content hidden grid grid-cols-12 gap-8 w-full">
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/html.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">HTML</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/css.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">CSS</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/bootstrap.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Bootstrap</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/ai-file.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Tailwind</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/js.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Javascript</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">React</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tools" class="tab-content hidden grid grid-cols-12 gap-8 w-full">
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Figma</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Adobe illustrator</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Photoshop</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Adobe XD</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Jira</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">GitHub</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">VS Code</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="skills-card p-6">
+                            <div class="flex items-center flex-col gap-6">
+                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
+                                    alt="Wireframing">
+
+                                <h6 class="text-lg text-white bg-transparent">Sublime</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio" class="xl:container mx-auto p-20 pt-0 relative">
+        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
+        <div class="flex justify-end">
+            <img src="./assets/images/sectionHeadings/Portfolio.svg">
+        </div>
+
+        <div class="relative py-20">
+
+            <!-- Slider Track -->
+            <div id="slider"
+                class="flex gap-6 overflow-x-auto no-scrollbar">
+
+                <!-- CARD 1 -->
+                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
+                    <div class="portfolio-card p-3">
+                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/autofintech-home.jpg">
+                        <div class="portfolio-content p-3">
+                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">AutoFintech - Home</h6>
+                            <p class="text-white/60 text-center text-md mt-8">
+                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
+                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
+                                top business leaders leverage AI and Machine Learning to build sales pipelines.
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
+                    <div class="portfolio-card p-3">
+                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/crm-autofintech.jpg">
+                        <div class="portfolio-content p-3">
+                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">CRM - AutoFintech</h6>
+                            <p class="text-white/60 text-center text-md mt-8">
+                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
+                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
+                                top business leaders leverage AI and Machine Learning to build sales pipelines.
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
+                    <div class="portfolio-card p-3">
+                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/white-label-site-autofintech.jpg">
+                        <div class="portfolio-content p-3">
+                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">White Label Site - Autofintech</h6>
+                            <p class="text-white/60 text-center text-md mt-8">
+                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
+                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
+                                top business leaders leverage AI and Machine Learning to build sales pipelines.
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
+                    <div class="portfolio-card p-3">
+                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/motorlend.png">
+                        <div class="portfolio-content p-3">
+                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">Motorlend</h6>
+                            <p class="text-white/60 text-center text-md mt-8">
+                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
+                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
+                                top business leaders leverage AI and Machine Learning to build sales pipelines.
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+            </div>
+            <!-- Slider Button -->
+            <div class="flex justify-center mt-12">
+                <div id="scrollTrack"
+                    class="relative w-34 h-4 bg-transparent rounded-full cursor-pointer">
+
+                    <div id="scrollThumb"
+                        class="absolute top-1 left-1 h-2 w-12 bg-pink-500 rounded-full cursor-pointer transition-none">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="grid grid-cols-12 gap-8 w-full py-20">
+
+            <div class="col-span-4">
+                <div class="portfolio-card p-3">
+                    <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/crm-autofintech.jpg">
+                    <div class="portfolio-content p-3">
+                        <h6 class="text-2xl text-white font-medium bg-transparent text-center">CRM - AutoFintech</h6>
+                        <p class="text-white/60 text-center text-md mt-8">
+                            Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
+                            how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
+                            top business leaders leverage AI and Machine Learning to build sales pipelines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        function initGradientFollow() {
+            const blob = document.querySelector(".blob");
+            if (!blob) return;
+
+            const handleMouseMove = (e) => {
+                blob.style.left = `${e.clientX}px`;
+                blob.style.top = `${e.clientY}px`;
+            };
+
+            document.addEventListener("mousemove", handleMouseMove);
+            return () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+            };
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const cleanup = initGradientFollow();
+            window.addEventListener("beforeunload", cleanup);
+        });
+    </script>
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const target = tab.dataset.tab;
+
+                tabs.forEach(t => {
+                    t.classList.remove(
+                        "text-pink-500",
+                        "border-pink-500"
+                    );
+                    t.classList.add(
+                        "text-white",
+                        "border-transparent"
+                    );
+                });
+
+                contents.forEach(c => c.classList.add("hidden"));
+
+                tab.classList.remove("text-white", "border-transparent");
+                tab.classList.add("text-pink-500", "border-pink-500");
+
+                document.getElementById(target).classList.remove("hidden");
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".menu-items a[href^='#']").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                const href = this.getAttribute("href");
+
+                // Ignore empty #
+                if (href === "#") return;
+
+                e.preventDefault();
+
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        const slider = document.getElementById("slider");
+        const track = document.getElementById("scrollTrack");
+        const thumb = document.getElementById("scrollThumb");
+
+        let isDragging = false;
+        let grabOffset = 0;
+        let maxScroll;
+        let maxThumbMove;
+
+        function calculateSizes() {
+            maxScroll = slider.scrollWidth - slider.clientWidth;
+            maxThumbMove = track.clientWidth - thumb.clientWidth;
+        }
+        calculateSizes();
+        window.addEventListener("resize", calculateSizes);
+
+        /* Sync thumb when slider scrolls */
+        slider.addEventListener("scroll", () => {
+            if (isDragging) return;
+
+            const ratio = slider.scrollLeft / maxScroll;
+            thumb.style.transform =
+                `translateX(${ratio * maxThumbMove}px)`;
+        });
+
+        /* DRAG START */
+        thumb.addEventListener("mousedown", (e) => {
+            isDragging = true;
+
+            const thumbRect = thumb.getBoundingClientRect();
+            grabOffset = e.clientX - thumbRect.left; // 👈 store where inside thumb you grabbed
+        });
+
+        /* DRAG END */
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+        });
+
+        /* DRAG MOVE */
+        document.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+
+            const trackRect = track.getBoundingClientRect();
+
+            let moveX = e.clientX - trackRect.left - grabOffset;
+
+            moveX = Math.max(0, Math.min(moveX, maxThumbMove));
+
+            const ratio = moveX / maxThumbMove;
+            slider.scrollLeft = ratio * maxScroll;
+
+            thumb.style.transform = `translateX(${moveX}px)`;
+        });
+
+        /* CLICK ON TRACK */
+        track.addEventListener("click", (e) => {
+            if (e.target === thumb) return;
+
+            const rect = track.getBoundingClientRect();
+            let clickX = e.clientX - rect.left - thumb.clientWidth / 2;
+
+            clickX = Math.max(0, Math.min(clickX, maxThumbMove));
+
+            const ratio = clickX / maxThumbMove;
+            slider.scrollLeft = ratio * maxScroll;
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #FF00F2;
+  --secondary-color: #1100FF;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+.blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  /* half of 650px */
+  height: 400px;
+  /* half of 650px */
+  border-radius: 100%;
+  background-image: linear-gradient(#1100ff 10%, #ff00f2);
+  filter: blur(175px);
+  /* half of 250px for proportionate glow */
+  transition: all 450ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: -1;
+}
+
+.clip-hex {
+  clip-path: polygon(25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%);
+}
+
+.tab-btn {
+  @apply w-full text-left text-lg font-medium pl-4 border-l-4 border-transparent text-gray-400 hover:text-pink-500 hover:border-pink-500 transition;
+}
+
+.tab-btn.is-active {
+  @apply text-pink-500 border-pink-500;
+}
+
+
+.skills-card {
+  position: relative;
+  border-radius: 30px;
+}
+
+.skills-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+
+  background: linear-gradient(90deg,
+      rgba(17, 0, 255, 0.8),
+      rgba(255, 0, 242, 0.6));
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 30px;
+}
+
+.portfolio-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+
+  background: linear-gradient(0deg,
+      rgba(17, 0, 255, 0.8),
+      rgba(255, 0, 242, 0.6));
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+#scrollTrack {
+  position: relative;
+  border-radius: 30px;
+}
+
+#scrollTrack::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+
+  background: linear-gradient(270deg,
+      rgba(17, 0, 255, 0.8),
+      rgba(255, 0, 242, 0.6));
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* #scrollThumb{
+  position: relative;
+  left: 4px;
+  top: 4px;
+} */
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
