@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ehtesham Alam | UI/UX Designer & Frontend Developer</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Custom CSS for keyframes -->
+  <link href="assets/css/profile.css" rel="stylesheet" />
+</head>
+
+<body
+  class="font-['Inter'] bg-[#060611] text-[#e8e8f8] overflow-x-hidden relative w-full min-h-screen text-base max-w-[100vw]">
+
+  <!-- Main Wrapper to force no x-scroll on mobile -->
+  <div class="w-full overflow-x-hidden relative">
+
+    <!-- Background orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[500px] h-[500px] bg-[#7c3aed] -top-[150px] -left-[150px] animate-[orbFloat_14s_ease-in-out_infinite]">
+      </div>
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[350px] h-[350px] bg-[#a855f7] top-[30%] -right-[100px] animate-[orbFloat_14s_ease-in-out_infinite_3s] !delay-[3000ms]">
+      </div>
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[280px] h-[280px] bg-[#6d28d9] bottom-[10%] left-[25%] animate-[orbFloat_14s_ease-in-out_infinite_7s] !delay-[7000ms]">
+      </div>
+    </div>
+
+    <!-- ── NAVBAR ──────────────────────────────────────────────────── -->
+    <nav id="mainNav"
+      class="fixed top-0 w-full z-[1000] bg-[#060611]/90 backdrop-blur-xl border-b border-[#a855f7]/15 py-3.5 transition-all duration-300">
+      <div
+        class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3 flex flex-wrap items-center justify-between relative">
+        <a class="text-lg font-black italic tracking-widest text-white no-underline" href="#hero"><em
+            class="not-italic text-[#a855f7]">E</em>.ALAM</a>
+
+        <button
+          class="lg:hidden border border-[#a855f7]/40 p-2 rounded text-white navbar-toggler hover:bg-[#a855f7]/20 transition-colors"
+          type="button">
+          <i class="bi bi-list text-2xl"></i>
+        </button>
+
+        <div class="hidden w-full lg:flex lg:items-center lg:w-auto mt-4 lg:mt-0 flex-1" id="navMenu">
+          <ul class="flex flex-col lg:flex-row gap-1 list-none m-0 p-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#hero">Home</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#experience">Experience</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#skills">Skills</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#portfolio">Portfolio</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#education">Education</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#about">About</a></li>
+          </ul>
+          <div
+            class="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-0 px-3.5 lg:px-0 lg:ml-auto shrink-0 mb-4 lg:mb-0 justify-center">
+            <button
+              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-xs font-medium px-5 py-2 transition-all duration-200 hover:bg-[#a855f7]/10 hover:border-[#a855f7] cursor-pointer">Resume</button>
+            <button
+              class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white border-0 rounded-full text-xs font-semibold px-5 py-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(168,85,247,.4)] cursor-pointer">Contact
+              Me</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── HERO ────────────────────────────────────────────────────── -->
+    <section id="hero" class="min-h-screen relative z-10 flex items-center pt-20">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+
+          <!-- Left -->
+          <div class="w-full lg:w-1/2">
+            <div
+              class="inline-flex items-center gap-2 bg-gradient-to-br from-[#7c3aed]/15 to-[#a855f7]/10 border border-[#a855f7]/30 px-4 py-2 rounded-full text-xs text-[#c084fc] tracking-wide mb-6 animate-[fadeUp_.7s_ease_both]">
+              <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-[pulseDot_2s_ease_infinite]"></div>
+              Available for freelance
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tighter text-white animate-[fadeUp_.7s_ease_.1s_both]">
+              Hey, I'm<br>
+              <span
+                class="bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#e879f9] bg-clip-text text-transparent">Ehtesham
+                Alam</span>
+            </h1>
+            <div class="flex items-center gap-3 my-4.5 animate-[fadeUp_.7s_ease_.2s_both]">
+              <div class="h-px w-16 bg-gradient-to-r from-[#a855f7] to-transparent"></div>
+              <div
+                class="w-6 h-6 rounded-md bg-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center">
+                <svg width="10" height="10" viewBox="0 0 10 10">
+                  <circle cx="5" cy="5" r="3" fill="#a855f7" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-xl font-light text-[#8888bb] tracking-wide animate-[fadeUp_.7s_ease_.3s_both] mt-4">
+              <strong class="text-[#e8e8f8] font-bold">UI/UX Designer</strong> <span
+                class="text-amber-500 italic">&amp;</span> <strong class="text-[#e8e8f8] font-bold">Frontend
+                Developer</strong>
+            </p>
+            <p class="text-sm text-[#8888bb] leading-loose my-4 max-w-md animate-[fadeUp_.7s_ease_.4s_both]">
+              Crafting pixel-perfect digital experiences that blend aesthetics with functionality. From wireframes to
+              production-ready interfaces — I bring ideas to life.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-2 animate-[fadeUp_.7s_ease_.5s_both]">
+              <a href="#about"
+                class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white font-semibold rounded-full text-sm px-8 py-3 transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(124,58,237,.45)] no-underline">Hire
+                Me</a>
+              <a href="#skills"
+                class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-sm font-medium px-7 py-3 transition-all duration-200 cursor-pointer hover:bg-[#a855f7]/10 hover:border-[#a855f7] no-underline">View
+                Skills</a>
+            </div>
+            <div
+              class="flex flex-wrap gap-5 sm:gap-9 mt-8 pt-7 border-t border-[#a855f7]/10 animate-[fadeUp_.7s_ease_.6s_both]">
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  3+</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Years Experience</div>
+              </div>
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  20+</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Projects Done</div>
+              </div>
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  2</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Companies</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right – Avatar -->
+          <div class="w-full lg:w-1/2 flex justify-center mt-12 lg:mt-0">
+            <div class="relative w-64 h-80 md:w-[300px] md:h-[360px] mx-auto animate-[fadeIn_1s_ease_.3s_both]">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-ring-spin"></div>
+              <div
+                class="absolute -top-3.5 -left-3.5 bg-gradient-to-br from-[#7c3aed] to-[#a855f7] rounded-xl px-3.5 py-2 text-[11px] font-bold text-white whitespace-nowrap shadow-[0_6px_24px_rgba(124,58,237,.5)] z-10">
+                ✦ 3+ Yrs Experience</div>
+
+              <div
+                class="w-full h-full bg-gradient-to-br from-[#1a0a2e] via-[#0f0f2e] to-[#1a1040] rounded-[24px_6px_24px_6px] border border-[#a855f7]/25 flex items-center justify-center overflow-hidden animate-[float_4s_ease-in-out_infinite]">
+                <div class="text-center p-6">
+                  <div
+                    class="w-32 h-32 rounded-full bg-gradient-to-br from-[#7c3aed]/30 to-[#a855f7]/15 border-2 border-[#a855f7]/45 flex items-center justify-center mx-auto mb-4 text-5xl">
+                    <svg width="64" height="76" viewBox="0 0 64 76" fill="none">
+                      <ellipse cx="32" cy="24" rx="17" ry="18" fill="rgba(168,85,247,0.25)"
+                        stroke="rgba(168,85,247,0.5)" stroke-width="1.5" />
+                      <ellipse cx="32" cy="64" rx="27" ry="18" fill="rgba(168,85,247,0.15)"
+                        stroke="rgba(168,85,247,0.3)" stroke-width="1.5" />
+                    </svg>
+                  </div>
+                  <div class="text-base font-bold text-white mb-1">Ehtesham Alam</div>
+                  <div class="text-xs text-[#c084fc] uppercase tracking-widest">UI/UX &amp; Frontend</div>
+                </div>
+              </div>
+
+              <!-- Social -->
+              <div class="hidden md:flex absolute -right-[52px] top-1/2 -translate-y-1/2 flex-col gap-2.5">
+                <a href="https://linkedin.com"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://facebook.com"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank"><i class="bi bi-facebook"></i></a>
+              </div>
+
+              <!-- Floating cards -->
+              <div
+                class="absolute bg-[#0d0d1a]/92 border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md -bottom-4 left-0 md:-left-6 animate-[fadeUp_1s_ease_.6s_both]">
+                <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Status</div>
+                <div class="text-sm font-bold text-white flex items-center"><span
+                    class="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>Open to Work</div>
+              </div>
+              <div
+                class="absolute bg-[#0d0d1a]/92 border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md top-5 right-0 md:-right-16 animate-[fadeUp_1s_ease_.8s_both]">
+                <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Latest Tool</div>
+                <div class="text-sm font-bold text-white">Figma ✦</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── EXPERIENCE ──────────────────────────────────────────────── -->
+    <section id="experience" class="py-24 relative z-10 w-full overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="text-right mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Work History</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Experience</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-7 relative overflow-hidden transition-all duration-300 h-full group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(124,58,237,.15)] before:content-[''] before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-gradient-to-r before:from-[#7c3aed] before:via-[#a855f7] before:to-[#c084fc] before:opacity-0 before:transition-opacity group-hover:before:opacity-100">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,.14),transparent)] pointer-events-none">
+              </div>
+              <div class="text-base font-bold text-[#c084fc] mb-2.5">Technoarray Web Solutions</div>
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span
+                  class="bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20 text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Web
+                  Designer</span>
+                <span class="text-xs text-[#5555a0]">May 2022 – July 2025</span>
+              </div>
+              <p class="text-sm leading-relaxed text-[#8888bb] mt-3.5">Designed user-friendly web interfaces,
+                collaborating with developers and product managers to meet project goals. Used Figma to create
+                wireframes and prototypes, conducted user testing, and refined designs based on feedback. Built
+                responsive layouts with HTML, CSS and Bootstrap ensuring cross-browser compatibility while following the
+                latest UI/UX trends.</p>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.15s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-7 relative overflow-hidden transition-all duration-300 h-full group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(124,58,237,.15)] before:content-[''] before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-gradient-to-r before:from-[#7c3aed] before:via-[#a855f7] before:to-[#c084fc] before:opacity-0 before:transition-opacity group-hover:before:opacity-100">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,.14),transparent)] pointer-events-none">
+              </div>
+              <div class="text-base font-bold text-[#c084fc] mb-2.5">Anteriad</div>
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span
+                  class="bg-[#22c55e]/10 text-[#4ade80] border border-[#22c55e]/25 text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Web
+                  Designer · Active</span>
+                <span class="text-xs text-[#5555a0]">July 2025 – Present</span>
+              </div>
+              <p class="text-sm leading-relaxed text-[#8888bb] mt-3.5">Focus on UI/UX design and front-end development.
+                Designed the complete UI for platforms like Infowatch Daily and TechVersions, creating mockups that
+                align with user needs and brand identity. Alongside design, also worked on a React-based dashboard
+                project, building front-end interfaces for blogs and resource websites with responsive and interactive
+                components.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── SKILLS ──────────────────────────────────────────────────── -->
+    <section id="skills" class="py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
+            What I Do</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">My <span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">Skills</span></div>
+        </div>
+
+        <div class="flex flex-wrap gap-1 mb-8 bg-[#0d0d1a] rounded-xl p-1.5 border border-[#a855f7]/10 w-fit reveal">
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)] active"
+            data-tab="tools">Tools</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="ui">UI / UX</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="frontend">Frontend</button>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid"></div>
+
+        <div class="mt-8 mx-auto md:mx-0 w-full max-w-2xl" id="skills-bars"></div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── PORTFOLIO ───────────────────────────────────────────────── -->
+    <section id="portfolio" class="py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="text-right mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Selected Work</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Portfolio</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              <div
+                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
+                <div
+                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
+                  UI Design</div>
+                <div
+                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
+                  🚗</div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">AutoFintech – Home</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Full homepage UI design for a fintech auto
+                  platform, including hero, features, and CTA sections with responsive layouts.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Figma</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">UI
+                    Design</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.12s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              <div
+                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
+                <div
+                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
+                  Dashboard</div>
+                <div
+                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
+                  📊</div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">CRM – AutoFintech</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Customer relationship dashboard with data
+                  tables, relationship tracking, and interactive filtering components.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">React</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Dashboard</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">CRM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.24s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              <div
+                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
+                <div
+                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
+                  Web Design</div>
+                <div
+                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
+                  🏷</div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">White Label Site – Autofintech</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Rebrandable white-label website with modular
+                  components adaptable to multiple partner brands.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">HTML/CSS</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Tailwind</span>
+                  <span
+                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Branding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── EDUCATION ───────────────────────────────────────────────── -->
+    <section id="education" class="py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
+            Academic Background</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">Education <span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">&amp; Certs</span></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 mt-2">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-6 flex gap-4 items-start transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(124,58,237,.12)]">
+              <div
+                class="w-14 h-14 rounded-xl shrink-0 bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center text-2xl">
+                🎓</div>
+              <div>
+                <div class="text-base font-bold text-white mb-1">Bachelor of Computer Applications</div>
+                <div class="text-sm text-[#c084fc] font-medium mb-1.5">Dr. A.P.J. Abdul Kalam University</div>
+                <div class="text-[11px] text-[#5555a0] flex items-center gap-1.5 mb-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c084fc]"></div>2019 – 2022
+                </div>
+                <div class="text-xs text-[#8888bb] leading-relaxed">Studied core computer science, web technologies, and
+                  software engineering fundamentals. Specialized in frontend development and digital design.</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.15s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-6 flex gap-4 items-start transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(124,58,237,.12)]">
+              <div
+                class="w-14 h-14 rounded-xl shrink-0 bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center text-2xl">
+                💻</div>
+              <div>
+                <div class="text-base font-bold text-white mb-1">UI/UX Design Specialization</div>
+                <div class="text-sm text-[#c084fc] font-medium mb-1.5">Self-Directed &amp; Online Courses</div>
+                <div class="text-[11px] text-[#5555a0] flex items-center gap-1.5 mb-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c084fc]"></div>2022 – Ongoing
+                </div>
+                <div class="text-xs text-[#8888bb] leading-relaxed">Continuous learning through Udemy, Google UX Design,
+                  and Interaction Design Foundation. Focused on design thinking, prototyping, and user research.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Certifications -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">🎨</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">Google UX Design</div>
+              <div class="text-[10px] text-[#5555a0]">Google · Coursera</div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.08s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">⚛️</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">React – Complete Guide</div>
+              <div class="text-[10px] text-[#5555a0]">Udemy</div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.16s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">📐</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">Figma Advanced</div>
+              <div class="text-[10px] text-[#5555a0]">Design+Code</div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.24s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">🌐</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">Responsive Web Design</div>
+              <div class="text-[10px] text-[#5555a0]">freeCodeCamp</div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.32s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">🖌</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">Adobe Illustrator CC</div>
+              <div class="text-[10px] text-[#5555a0]">Adobe</div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.40s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-4.5 text-center transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1">
+              <div class="text-2xl mb-0.5">📊</div>
+              <div class="text-[11px] font-semibold text-[#e8e8f8] mb-[3px]">Tailwind CSS Mastery</div>
+              <div class="text-[10px] text-[#5555a0]">Udemy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── ABOUT ───────────────────────────────────────────────────── -->
+    <section id="about" class="py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="text-right mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Who I Am</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">About</span> Me</div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+
+          <!-- Visual -->
+          <div class="w-full lg:w-5/12 flex flex-col items-center reveal-left">
+            <div
+              class="w-72 h-72 rounded-full border border-[#a855f7]/20 flex items-center justify-center mx-auto relative animate-[spinSlow_30s_linear_infinite_reverse]">
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="w-52 h-52 rounded-full bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/35 flex items-center justify-center animate-[spinSlow_30s_linear_infinite]">
+                <div
+                  class="w-32 h-32 rounded-full bg-gradient-to-br from-[#2a1040] to-[#1a0a2e] border-2 border-[#a855f7]/50 flex items-center justify-center text-5xl">
+                  <svg width="56" height="68" viewBox="0 0 56 68" fill="none">
+                    <ellipse cx="28" cy="20" rx="14" ry="16" fill="rgba(168,85,247,0.3)" stroke="rgba(168,85,247,0.6)"
+                      stroke-width="1.5" />
+                    <ellipse cx="28" cy="58" rx="24" ry="16" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.35)"
+                      stroke-width="1.5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-5 justify-center">
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">Figma</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">React</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">CSS3</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">Adobe
+                XD</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">JavaScript</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">Tailwind</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">Photoshop</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f7]/25 bg-[#a855f7]/5">GitHub</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="w-full lg:w-7/12 reveal-right">
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">Hi, I'm <strong class="text-white">Ehtesham
+                Alam</strong> — a passionate UI/UX Designer and Frontend Developer based in India with 3+ years of
+              hands-on experience building user-centered digital products.</p>
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">I believe great design is more than aesthetics — it's
+              about solving real problems for real people. My approach combines rigorous research, thoughtful
+              wireframing, and pixel-perfect execution to deliver experiences that feel intuitive and look stunning.</p>
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">When I'm not designing or coding, I explore new design
+              trends, contribute to open-source projects, and continuously sharpen my craft through learning and
+              experimentation.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div>
+                <div
+                  class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🎯</div>
+                  <div class="text-sm font-semibold text-white mb-1">User-Centered</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Every design decision is grounded in user
+                    needs and research.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">⚡</div>
+                  <div class="text-sm font-semibold text-white mb-1">Performance First</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Clean code and optimized layouts for fast,
+                    smooth experiences.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🤝</div>
+                  <div class="text-sm font-semibold text-white mb-1">Collaborative</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Love working with cross-functional teams to
+                    align on shared goals.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🌱</div>
+                  <div class="text-sm font-semibold text-white mb-1">Always Learning</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Continuously exploring new tools, trends, and
+                    techniques.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── CONTACT BAR ─────────────────────────────────────────────── -->
+    <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3 py-24">
+      <div
+        class="bg-gradient-to-br from-[#7c3aed]/15 to-[#a855f7]/10 border border-[#a855f7]/20 rounded-3xl px-10 py-11 relative overflow-hidden reveal contact-bar">
+        <div class="flex flex-col lg:flex-row items-center gap-6 relative z-10">
+          <div class="w-full lg:w-2/3 text-center lg:text-left">
+            <div class="text-3xl font-extrabold text-white mb-1.5">Let's build something amazing together</div>
+            <div class="text-sm text-[#8888bb]">Available for freelance projects and full-time opportunities</div>
+          </div>
+          <div class="w-full lg:w-1/3 flex flex-wrap gap-4 justify-center lg:justify-end mt-4 lg:mt-0">
+            <button
+              class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white rounded-full text-sm font-semibold px-7 py-3 transition-all cursor-pointer hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(124,58,237,.45)] whitespace-nowrap">Get
+              In Touch</button>
+            <button
+              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-sm font-medium px-7 py-3 transition-all cursor-pointer hover:bg-[#a855f7]/10 hover:border-[#a855f7] whitespace-nowrap">Download
+              CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+    <footer class="border-t border-[#a855f7]/10 py-6 relative z-10">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <div class="w-full md:w-1/4 text-center md:text-left">
+            <div class="text-base font-black text-white italic tracking-wider"><em
+                class="text-[#a855f7] not-italic">E</em>.ALAM</div>
+          </div>
+          <div class="w-full md:w-1/2 text-center">
+            <div class="text-xs text-[#5555a0]">© 2025 Ehtesham Alam · Designed &amp; Built with passion</div>
+          </div>
+          <div class="w-full md:w-1/4 flex gap-4 justify-center md:justify-end">
+            <a href="#" class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">LinkedIn</a>
+            <a href="#" class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">GitHub</a>
+            <a href="#" class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    /* ── NAVBAR TOGGLER ─────────────────────────────────────────────── */
+    document.querySelector('.navbar-toggler').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('hidden');
+    });
+
+    /* ── SKILL DATA ─────────────────────────────────────────────────── */
+    const skillData = {
+      tools: {
+        cards: [
+          { ico: '🎨', name: 'Figma' }, { ico: '🖌️', name: 'Adobe Illustrator' },
+          { ico: '📷', name: 'Photoshop' }, { ico: '📐', name: 'Adobe XD' },
+          { ico: '📋', name: 'Jira' }, { ico: '💻', name: 'GitHub' },
+          { ico: '⌨️', name: 'VS Code' }, { ico: '📝', name: 'Sublime' }
+        ],
+        bars: [
+          { name: 'Figma', pct: 95 }, { name: 'Adobe Illustrator', pct: 80 },
+          { name: 'Photoshop', pct: 75 }, { name: 'Adobe XD', pct: 85 }
+        ]
+      },
+      ui: {
+        cards: [
+          { ico: '🗂️', name: 'Wireframing' }, { ico: '📱', name: 'Prototyping' },
+          { ico: '🔬', name: 'User Testing' }, { ico: '🎭', name: 'Interaction Design' },
+          { ico: '🖼️', name: 'Visual Design' }, { ico: '♿', name: 'Accessibility' },
+          { ico: '🔁', name: 'Design Systems' }, { ico: '📊', name: 'UX Research' }
+        ],
+        bars: [
+          { name: 'UI Design', pct: 92 }, { name: 'UX Research', pct: 78 },
+          { name: 'Prototyping', pct: 88 }, { name: 'Design Systems', pct: 82 }
+        ]
+      },
+      frontend: {
+        cards: [
+          { ico: '🌐', name: 'HTML5' }, { ico: '🎨', name: 'CSS3' },
+          { ico: '⚡', name: 'JavaScript' }, { ico: '⚛️', name: 'React' },
+          { ico: '📦', name: 'Tailwind CSS' }, { ico: '💨', name: 'Bootstrap' },
+          { ico: '🔧', name: 'TypeScript' }, { ico: '📡', name: 'REST APIs' }
+        ],
+        bars: [
+          { name: 'HTML / CSS', pct: 95 }, { name: 'JavaScript', pct: 80 },
+          { name: 'React', pct: 75 }, { name: 'Tailwind CSS', pct: 90 }
+        ]
+      }
+    };
+
+    function renderSkills(key) {
+      const d = skillData[key];
+      const grid = document.getElementById('skills-grid');
+      const bars = document.getElementById('skills-bars');
+
+      /* cards */
+      grid.innerHTML = d.cards.map(c => `
+    <div>
+      <div class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-2xl px-4 py-5 text-center transition-all duration-300 relative overflow-hidden group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(124,58,237,.2)] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#a855f7]/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity">
+        <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/25 flex items-center justify-center text-2xl relative z-10">${c.ico}</div>
+        <div class="text-xs text-[#8888bb] font-medium relative z-10">${c.name}</div>
+      </div>
+    </div>`).join('');
+
+      /* bars */
+      bars.innerHTML = d.bars.map(b => `
+    <div class="mb-4.5">
+      <div class="flex justify-between text-xs mb-1.5">
+        <span class="text-[#e8e8f8]">${b.name}</span>
+        <span class="text-[#c084fc] font-semibold">${b.pct}%</span>
+      </div>
+      <div class="h-1.5 bg-[#a855f7]/10 rounded-sm overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-[#7c3aed] via-[#a855f7] to-[#c084fc] rounded-sm" style="width:0%; transition: width 0.8s cubic-bezier(.4,0,.2,1)" data-target="${b.pct}%"></div>
+      </div>
+    </div>`).join('');
+
+      /* animate bars after a tick */
+      setTimeout(() => {
+        document.querySelectorAll('[data-target]').forEach(el => {
+          el.style.width = el.dataset.target;
+        });
+      }, 80);
+    }
+
+    document.querySelectorAll('.nav-stab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-stab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSkills(btn.dataset.tab);
+      });
+    });
+
+    /* init */
+    renderSkills('tools');
+
+    /* ── NAVBAR SCROLL ──────────────────────────────────────────────── */
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+
+      /* active link */
+      const sections = ['hero', 'experience', 'skills', 'portfolio', 'education', 'about'];
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+
+    /* ── SCROLL REVEAL ──────────────────────────────────────────────── */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+
+</html>
