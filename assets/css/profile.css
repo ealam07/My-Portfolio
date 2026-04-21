@@ -264,7 +264,7 @@ html {
 }
 
 .card-thumb {
-  height: 180px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,7 +412,7 @@ html {
 }
 
 .modal-hero {
-  height: 260px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   border-radius: 28px 28px 0 0;
