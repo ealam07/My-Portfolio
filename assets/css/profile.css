@@ -88,3 +88,19 @@ html { scroll-behavior: smooth; }
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+
+.exp-card:hover::before {
+    opacity: 1;
+}
+.exp-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #7c3aed, #a855f7, #c084fc);
+    opacity: 0;
+    transition: opacity .3s;
+}

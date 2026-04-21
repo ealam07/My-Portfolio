@@ -38,46 +38,61 @@
 
     <!-- ── NAVBAR ──────────────────────────────────────────────────── -->
     <nav id="mainNav"
-      class="fixed top-0 w-full z-[1000] bg-[#060611]/90 backdrop-blur-xl border-b border-[#a855f7]/15 py-3.5 transition-all duration-300">
+      class="fixed top-0 w-full z-[1000] bg-transparent backdrop-blur-xl border-b border-[#a855f7]/15 py-3.5 transition-all duration-300">
       <div
         class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3 flex flex-wrap items-center justify-between relative">
-        <a class="text-lg font-black italic tracking-widest text-white no-underline" href="#hero"><em
-            class="not-italic text-[#a855f7]">E</em>.ALAM</a>
+        <a class="text-lg font-black italic tracking-widest text-white no-underline" href="#hero">
+          <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21" fill="none">
+            <path
+              d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
+              fill="#c084fc"></path>
+            <path
+              d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
+              fill="white"></path>
+          </svg>
+        </a>
 
         <button
           class="lg:hidden border border-[#a855f7]/40 p-2 rounded text-white navbar-toggler hover:bg-[#a855f7]/20 transition-colors"
           type="button">
-          <i class="bi bi-list text-2xl"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
         </button>
 
-        <div class="hidden w-full lg:flex lg:items-center lg:w-auto mt-4 lg:mt-0 flex-1" id="navMenu">
-          <ul class="flex flex-col lg:flex-row gap-1 list-none m-0 p-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+        <div
+          class="hidden absolute top-full left-4 right-4 z-50 lg:static lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 lg:flex-1 bg-[#0d0d1a] lg:bg-transparent border border-[#a855f7]/20 lg:border-none rounded-2xl lg:rounded-none p-5 lg:p-0 shadow-[0_10px_40px_rgba(124,58,237,.15)] lg:shadow-none"
+          id="navMenu">
+          <ul
+            class="flex flex-col lg:flex-row gap-2 lg:gap-1 list-none m-0 p-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#hero">Home</a></li>
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#experience">Experience</a></li>
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#skills">Skills</a></li>
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#portfolio">Portfolio</a></li>
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#education">Education</a></li>
             <li><a
-                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-2 px-3.5 relative group hover:text-[#c084fc] [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#about">About</a></li>
           </ul>
           <div
-            class="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-0 px-3.5 lg:px-0 lg:ml-auto shrink-0 mb-4 lg:mb-0 justify-center">
-            <button
-              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-xs font-medium px-5 py-2 transition-all duration-200 hover:bg-[#a855f7]/10 hover:border-[#a855f7] cursor-pointer">Resume</button>
-            <button
+            class="flex flex-col sm:flex-row gap-3 mt-6 lg:mt-0 px-3.5 lg:px-0 lg:ml-auto shrink-0 mb-2 lg:mb-0 justify-center">
+            <a href="./assets/file/Resume.pdf" download
+              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-xs font-medium px-5 py-2 transition-all duration-200 hover:bg-[#a855f7]/10 hover:border-[#a855f7] cursor-pointer">Resume</a>
+            <a href="mailto:ehtesham.developer@gmail.com"
               class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white border-0 rounded-full text-xs font-semibold px-5 py-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(168,85,247,.4)] cursor-pointer">Contact
-              Me</button>
+              Me</a>
           </div>
         </div>
       </div>
@@ -102,7 +117,7 @@
                 class="bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#e879f9] bg-clip-text text-transparent">Ehtesham
                 Alam</span>
             </h1>
-            <div class="flex items-center gap-3 my-4.5 animate-[fadeUp_.7s_ease_.2s_both]">
+            <div class="flex items-center gap-3 my-5 animate-[fadeUp_.7s_ease_.2s_both]">
               <div class="h-px w-16 bg-gradient-to-r from-[#a855f7] to-transparent"></div>
               <div
                 class="w-6 h-6 rounded-md bg-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center">
@@ -111,7 +126,7 @@
                 </svg>
               </div>
             </div>
-            <p class="text-xl font-light text-[#8888bb] tracking-wide animate-[fadeUp_.7s_ease_.3s_both] mt-4">
+            <p class="text-xl font-light text-[#8888bb] tracking-wide animate-[fadeUp_.7s_ease_.3s_both]">
               <strong class="text-[#e8e8f8] font-bold">UI/UX Designer</strong> <span
                 class="text-amber-500 italic">&amp;</span> <strong class="text-[#e8e8f8] font-bold">Frontend
                 Developer</strong>
@@ -162,8 +177,9 @@
 
               <div
                 class="w-full h-full bg-gradient-to-br from-[#1a0a2e] via-[#0f0f2e] to-[#1a1040] rounded-[24px_6px_24px_6px] border border-[#a855f7]/25 flex items-center justify-center overflow-hidden animate-[float_4s_ease-in-out_infinite]">
-                <div class="text-center p-6">
-                  <div
+                <div class="text-center p-6 pb-0">
+                  <img src="./assets/images/ehte.png" alt="profile image">
+                  <!-- <div
                     class="w-32 h-32 rounded-full bg-gradient-to-br from-[#7c3aed]/30 to-[#a855f7]/15 border-2 border-[#a855f7]/45 flex items-center justify-center mx-auto mb-4 text-5xl">
                     <svg width="64" height="76" viewBox="0 0 64 76" fill="none">
                       <ellipse cx="32" cy="24" rx="17" ry="18" fill="rgba(168,85,247,0.25)"
@@ -173,7 +189,7 @@
                     </svg>
                   </div>
                   <div class="text-base font-bold text-white mb-1">Ehtesham Alam</div>
-                  <div class="text-xs text-[#c084fc] uppercase tracking-widest">UI/UX &amp; Frontend</div>
+                  <div class="text-xs text-[#c084fc] uppercase tracking-widest">UI/UX &amp; Frontend</div> -->
                 </div>
               </div>
 
@@ -192,13 +208,13 @@
 
               <!-- Floating cards -->
               <div
-                class="absolute bg-[#0d0d1a]/92 border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md -bottom-4 left-0 md:-left-6 animate-[fadeUp_1s_ease_.6s_both]">
+                class="absolute bg-[#0d0d1aeb] border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md -bottom-4 left-0 md:-left-6 animate-[fadeUp_1s_ease_.6s_both]">
                 <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Status</div>
                 <div class="text-sm font-bold text-white flex items-center"><span
                     class="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>Open to Work</div>
               </div>
               <div
-                class="absolute bg-[#0d0d1a]/92 border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md top-5 right-0 md:-right-16 animate-[fadeUp_1s_ease_.8s_both]">
+                class="absolute bg-[#0d0d1aeb] border border-[#a855f7]/25 rounded-xl px-3.5 py-2.5 backdrop-blur-md top-5 right-0 md:-right-16 animate-[fadeUp_1s_ease_.8s_both]">
                 <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Latest Tool</div>
                 <div class="text-sm font-bold text-white">Figma ✦</div>
               </div>
@@ -312,7 +328,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="reveal">
             <div
-              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
               <div
                 class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
                 <div
@@ -340,7 +356,7 @@
           </div>
           <div class="reveal" style="transition-delay:.12s">
             <div
-              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
               <div
                 class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
                 <div
@@ -367,7 +383,7 @@
           </div>
           <div class="reveal" style="transition-delay:.24s">
             <div
-              class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
+              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
               <div
                 class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
                 <div
@@ -629,12 +645,12 @@
             <div class="text-sm text-[#8888bb]">Available for freelance projects and full-time opportunities</div>
           </div>
           <div class="w-full lg:w-1/3 flex flex-wrap gap-4 justify-center lg:justify-end mt-4 lg:mt-0">
-            <button
+            <a href="mailto:ehtesham.developer@gmail.com"
               class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white rounded-full text-sm font-semibold px-7 py-3 transition-all cursor-pointer hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(124,58,237,.45)] whitespace-nowrap">Get
-              In Touch</button>
-            <button
+              In Touch</a>
+            <a href="./assets/file/Resume.pdf" download
               class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-sm font-medium px-7 py-3 transition-all cursor-pointer hover:bg-[#a855f7]/10 hover:border-[#a855f7] whitespace-nowrap">Download
-              CV</button>
+              CV</a>
           </div>
         </div>
       </div>
@@ -645,8 +661,16 @@
       <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
         <div class="flex flex-col md:flex-row items-center gap-4">
           <div class="w-full md:w-1/4 text-center md:text-left">
-            <div class="text-base font-black text-white italic tracking-wider"><em
-                class="text-[#a855f7] not-italic">E</em>.ALAM</div>
+            <div class="text-base font-black text-white italic tracking-wider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21" fill="none">
+                <path
+                  d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
+                  fill="#c084fc"></path>
+                <path
+                  d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
+                  fill="white"></path>
+              </svg>
+            </div>
           </div>
           <div class="w-full md:w-1/2 text-center">
             <div class="text-xs text-[#5555a0]">© 2025 Ehtesham Alam · Designed &amp; Built with passion</div>
@@ -666,6 +690,15 @@
     /* ── NAVBAR TOGGLER ─────────────────────────────────────────────── */
     document.querySelector('.navbar-toggler').addEventListener('click', () => {
       document.getElementById('navMenu').classList.toggle('hidden');
+    });
+
+    /* ── AUTOCLOSE MOBILE MENU ──────────────────────────────────────── */
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          document.getElementById('navMenu').classList.add('hidden');
+        }
+      });
     });
 
     /* ── SKILL DATA ─────────────────────────────────────────────────── */
@@ -716,7 +749,7 @@
       /* cards */
       grid.innerHTML = d.cards.map(c => `
     <div>
-      <div class="bg-[#0d0d1a] border border-[#a855f7]/12 rounded-2xl px-4 py-5 text-center transition-all duration-300 relative overflow-hidden group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(124,58,237,.2)] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#a855f7]/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity">
+      <div class="bg-[#0d0d1a] border border-[#a855f71f] rounded-2xl px-4 py-5 text-center transition-all duration-300 relative overflow-hidden group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(124,58,237,.2)] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#a855f7]/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity">
         <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/25 flex items-center justify-center text-2xl relative z-10">${c.ico}</div>
         <div class="text-xs text-[#8888bb] font-medium relative z-10">${c.name}</div>
       </div>
@@ -724,7 +757,7 @@
 
       /* bars */
       bars.innerHTML = d.bars.map(b => `
-    <div class="mb-4.5">
+    <div class="mb-4">
       <div class="flex justify-between text-xs mb-1.5">
         <span class="text-[#e8e8f8]">${b.name}</span>
         <span class="text-[#c084fc] font-semibold">${b.pct}%</span>
@@ -756,7 +789,13 @@
     /* ── NAVBAR SCROLL ──────────────────────────────────────────────── */
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('mainNav');
-      nav.classList.toggle('scrolled', window.scrollY > 60);
+      if (window.scrollY > 60) {
+        nav.classList.remove('bg-transparent', 'py-3.5');
+        nav.classList.add('bg-[#060611]/95', 'py-2.5', 'shadow-md');
+      } else {
+        nav.classList.add('bg-transparent', 'py-3.5');
+        nav.classList.remove('bg-[#060611]/95', 'py-2.5', 'shadow-md');
+      }
 
       /* active link */
       const sections = ['hero', 'experience', 'skills', 'portfolio', 'education', 'about'];
