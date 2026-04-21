@@ -316,101 +316,253 @@
     <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
 
     <!-- ── PORTFOLIO ───────────────────────────────────────────────── -->
-    <section id="portfolio" class="py-24 relative z-10 overflow-hidden">
+    <section id="portfolio" class="portfolio-section py-24 relative z-10 overflow-hidden">
       <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
-        <div class="text-right mb-12 reveal">
-          <div
-            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
-            Selected Work</div>
-          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
-              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Portfolio</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="reveal">
+
+        <!-- Header -->
+        <div class="flex items-end justify-between mb-10 reveal">
+          <div>
             <div
-              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
-              <div
-                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
-                <div
-                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
-                  UI Design</div>
-                <div
-                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
-                  🚗</div>
+              class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
+              Selected Work</div>
+            <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">My <span
+                class="text-transparent" style="-webkit-text-stroke:1px rgba(168,85,247,.22)">Portfolio</span></div>
+          </div>
+          <!-- Arrow controls -->
+          <div class="flex items-center gap-3">
+            <button class="arrow-btn" id="prevBtn" onclick="slide(-1)">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="arrow-btn" id="nextBtn" onclick="slide(1)">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-track reveal" id="sliderTrack">
+
+          <!-- ── CARD 1 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(0)">
+              <div class="card-thumb bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
+                <div class="card-thumb-placeholder">🚗</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
               </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                UI Design</div>
               <div class="p-5 flex-1 flex flex-col">
                 <div class="text-sm font-bold text-white mb-1.5">AutoFintech – Home</div>
-                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Full homepage UI design for a fintech auto
-                  platform, including hero, features, and CTA sections with responsive layouts.</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Full homepage UI for a fintech auto platform
+                  with hero, features, and CTA sections with responsive layouts.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Figma</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">UI
-                    Design</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Responsive</span>
+                  <span class="tag">Figma</span><span class="tag">UI Design</span><span class="tag">Responsive</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="reveal" style="transition-delay:.12s">
-            <div
-              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
-              <div
-                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
-                <div
-                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
-                  Dashboard</div>
-                <div
-                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
-                  📊</div>
+
+          <!-- ── CARD 2 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(1)">
+              <div class="card-thumb bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
+                <div class="card-thumb-placeholder">📊</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
               </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Dashboard</div>
               <div class="p-5 flex-1 flex flex-col">
                 <div class="text-sm font-bold text-white mb-1.5">CRM – AutoFintech</div>
                 <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Customer relationship dashboard with data
-                  tables, relationship tracking, and interactive filtering components.</div>
+                  tables, tracking, and interactive filtering components.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">React</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Dashboard</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">CRM</span>
+                  <span class="tag">React</span><span class="tag">Dashboard</span><span class="tag">CRM</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="reveal" style="transition-delay:.24s">
-            <div
-              class="bg-[#0d0d1a] border border-[#a855f71f] rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col group hover:border-[#a855f7]/50 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,.2)]">
-              <div
-                class="h-40 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
-                <div
-                  class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20">
-                  Web Design</div>
-                <div
-                  class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">
-                  🏷</div>
+
+          <!-- ── CARD 3 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(2)">
+              <div class="card-thumb bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
+                <div class="card-thumb-placeholder">🏷️</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
               </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Web Design</div>
               <div class="p-5 flex-1 flex flex-col">
                 <div class="text-sm font-bold text-white mb-1.5">White Label Site – Autofintech</div>
                 <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Rebrandable white-label website with modular
                   components adaptable to multiple partner brands.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">HTML/CSS</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Tailwind</span>
-                  <span
-                    class="text-[10px] px-2.5 py-1 rounded-full bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20">Branding</span>
+                  <span class="tag">HTML/CSS</span><span class="tag">Tailwind</span><span class="tag">Branding</span>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- ── CARD 4 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(3)">
+              <div class="card-thumb bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]">
+                <div class="card-thumb-placeholder">📰</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Blog UI</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">Infowatch Daily</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Complete UI design for a news/blog platform
+                  at Anteriad — article pages, category views, and homepage.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">Blog</span><span class="tag">Anteriad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 5 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(4)">
+              <div class="card-thumb bg-gradient-to-br from-[#1c1917] via-[#44403c] to-[#78716c]">
+                <div class="card-thumb-placeholder">🔧</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Tech Blog</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">TechVersions</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Tech-focused blog & resource site design with
+                  article cards, search UI, and author profile layouts.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">UI/UX</span><span class="tag">React</span><span class="tag">Anteriad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 6 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(5)">
+              <div class="card-thumb bg-gradient-to-br from-[#312e81] via-[#4338ca] to-[#6366f1]">
+                <div class="card-thumb-placeholder">🎨</div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Design System</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">Component Library</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">A reusable design system built in Figma with
+                  tokens, component variants, and documentation for dev handoff.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">Design Tokens</span><span class="tag">System</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /slider-track -->
+
+        <!-- Progress dots + count -->
+        <div class="flex items-center justify-between mt-5 reveal">
+          <div class="flex items-center gap-2" id="dots"></div>
+          <div class="text-xs text-[#5555a0]" id="slideCount">1 / 6</div>
         </div>
+
       </div>
     </section>
+
+
+    <!-- ══════════════════════════════════════════════
+        PROJECT DETAIL MODAL
+    ══════════════════════════════════════════════ -->
+    <div class="modal-backdrop" id="modalBackdrop" onclick="handleBackdropClick(event)">
+      <div class="modal-box" id="modalBox">
+        <button class="modal-close" onclick="closeModal()"><i class="bi bi-x-lg"></i></button>
+
+        <!-- Dynamic hero image / color -->
+        <div class="modal-hero" id="modalHero"></div>
+
+        <!-- Content -->
+        <div class="p-7 md:p-9">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+            <div>
+              <div class="text-[10px] uppercase tracking-widest text-[#c084fc] mb-1" id="modalCategory"></div>
+              <h2 class="text-2xl font-black text-white" id="modalTitle"></h2>
+              <div class="text-xs text-[#5555a0] mt-1" id="modalYear"></div>
+            </div>
+            <div class="flex gap-3">
+              <a id="modalLiveLink" href="#" target="_blank"
+                class="hidden text-xs font-semibold px-5 py-2 rounded-full bg-gradient-to-br from-[#7c3aed] to-[#a855f7] text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(124,58,237,.4)]">
+                <i class="bi bi-box-arrow-up-right mr-1"></i> Live Demo
+              </a>
+              <a id="modalFigmaLink" href="#" target="_blank"
+                class="hidden text-xs font-semibold px-5 py-2 rounded-full border border-[#a855f7]/40 text-[#c084fc] transition-all hover:bg-[#a855f7]/10">
+                <i class="bi bi-figma mr-1"></i> Figma
+              </a>
+            </div>
+          </div>
+
+          <!-- Tags row -->
+          <div class="flex flex-wrap gap-2 mb-6" id="modalTags"></div>
+
+          <!-- Description -->
+          <p class="text-sm text-[#8888bb] leading-loose mb-8" id="modalDesc"></p>
+
+          <!-- Highlights -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8" id="modalHighlights"></div>
+
+          <!-- Image Gallery -->
+          <div id="gallerySection">
+            <div
+              class="text-xs uppercase tracking-widest text-[#c084fc] mb-4 flex items-center gap-2.5 before:content-[''] before:block before:w-5 before:h-px before:bg-[#a855f7]">
+              Screenshots</div>
+            <div class="img-gallery" id="modalGallery"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+        LIGHTBOX
+    ══════════════════════════════════════════════ -->
+    <div id="lightbox" class="lightbox" onclick="handleLbBackdrop(event)">
+
+      <!-- Top bar -->
+      <div class="lb-topbar">
+        <div class="lb-counter" id="lbCounter">1 / 6</div>
+        <button class="lb-close-btn" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <!-- Prev / Next -->
+      <button class="lb-arrow" id="lbPrev" onclick="lbNav(-1)"><i class="bi bi-chevron-left"></i></button>
+      <button class="lb-arrow" id="lbNext" onclick="lbNav(1)"><i class="bi bi-chevron-right"></i></button>
+
+      <!-- Main image -->
+      <div class="lightbox-img-wrap" id="lbImgWrap"></div>
+
+      <!-- Thumbnail strip -->
+      <div class="lb-strip" id="lbStrip"></div>
+    </div>
 
     <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
 
@@ -822,6 +974,325 @@
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
       revealObserver.observe(el);
     });
+  </script>
+
+  <script>
+    /* ══════════════════════════════════
+      PROJECT DATA – edit this to add
+      your own content, images, links
+    ══════════════════════════════════ */
+    const projects = [
+      {
+        title: "AutoFintech – Home",
+        category: "UI Design",
+        year: "2023",
+        gradient: "from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
+        bgClass: "bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
+        emoji: "🚗",
+        tags: ["Figma", "UI Design", "Responsive", "Fintech"],
+        desc: "Full homepage UI design for a fintech auto platform, including hero section, feature highlights, testimonials, and CTA sections. The design focused on trust signals, clean typography, and conversion-optimized layouts — built to scale across mobile and desktop breakpoints.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "12+" },
+          { icon: "📱", label: "Responsive", val: "3 sizes" },
+          { icon: "⏱️", label: "Duration", val: "3 weeks" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        // Add real image paths like: "./assets/images/autofintech-1.png"
+        gallery: ["./assets/images/portfolioBanners/autofintech-home.jpg",
+          "./assets/images/portfolioBanners/crm-autofintech.jpg",
+          "./assets/images/portfolioBanners/white-label-site-autofintech.jpg",
+          "./assets/images/portfolioBanners/motorlend.png",
+        ]
+      },
+      {
+        title: "CRM – AutoFintech",
+        category: "Dashboard",
+        year: "2023",
+        bgClass: "bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]",
+        emoji: "📊",
+        tags: ["React", "Dashboard", "CRM", "Data Tables"],
+        desc: "A feature-rich CRM dashboard built with React for the AutoFintech platform. Includes customer relationship tracking, interactive data tables with sorting & filtering, deal pipeline visualization, and a notification system. Focused on data clarity and fast task completion for sales teams.",
+        highlights: [
+          { icon: "⚛️", label: "Built with", val: "React" },
+          { icon: "📋", label: "Modules", val: "8 screens" },
+          { icon: "⏱️", label: "Duration", val: "5 weeks" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [null, null, null, null, null, null]
+      },
+      {
+        title: "White Label Site – Autofintech",
+        category: "Web Design",
+        year: "2024",
+        bgClass: "bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]",
+        emoji: "🏷️",
+        tags: ["HTML/CSS", "Tailwind", "Branding", "Multi-brand"],
+        desc: "Designed and built a rebrandable white-label website system for AutoFintech's partner network. Modular component architecture lets partners swap colors, logos, and copy without touching layout code. Supports 5+ brand themes and passed WCAG 2.1 AA accessibility checks.",
+        highlights: [
+          { icon: "🎨", label: "Brand themes", val: "5+" },
+          { icon: "♿", label: "Accessibility", val: "WCAG AA" },
+          { icon: "📦", label: "Components", val: "30+" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [null, null, null, null, null, null]
+      },
+      {
+        title: "Infowatch Daily",
+        category: "Blog UI",
+        year: "2025",
+        bgClass: "bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]",
+        emoji: "📰",
+        tags: ["Figma", "Blog", "Anteriad", "News"],
+        desc: "Complete UI for a news and editorial platform at Anteriad. Covers homepage feed, article detail pages, category views, author profiles, and search results. The design system ensures visual consistency across editorial content while keeping reading experience distraction-free.",
+        highlights: [
+          { icon: "📄", label: "Page types", val: "6" },
+          { icon: "🔎", label: "Search UI", val: "Included" },
+          { icon: "🏢", label: "Client", val: "Anteriad" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [null, null, null, null, null, null]
+      },
+      {
+        title: "TechVersions",
+        category: "Tech Blog",
+        year: "2025",
+        bgClass: "bg-gradient-to-br from-[#1c1917] via-[#44403c] to-[#78716c]",
+        emoji: "🔧",
+        tags: ["UI/UX", "React", "Anteriad", "Tech"],
+        desc: "Tech-focused blog and resource hub built for Anteriad. Features article card layouts, version changelog pages, author profile sections, and a topic-filter system. React front-end with responsive, interactive components optimized for developer audiences who scan quickly.",
+        highlights: [
+          { icon: "⚛️", label: "Frontend", val: "React" },
+          { icon: "📝", label: "Content types", val: "4" },
+          { icon: "🏢", label: "Client", val: "Anteriad" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [null, null, null, null, null, null]
+      },
+      {
+        title: "Component Library",
+        category: "Design System",
+        year: "2024",
+        bgClass: "bg-gradient-to-br from-[#312e81] via-[#4338ca] to-[#6366f1]",
+        emoji: "🎨",
+        tags: ["Figma", "Design Tokens", "System", "Documentation"],
+        desc: "A comprehensive, reusable design system built in Figma with semantic color tokens, spacing scales, typography ramp, and fully-documented component variants. Designed for fast dev handoff with auto-layout, interactive states, and a shared library used across multiple projects.",
+        highlights: [
+          { icon: "🧩", label: "Components", val: "60+" },
+          { icon: "🎨", label: "Tokens", val: "Semantic" },
+          { icon: "📐", label: "Tool", val: "Figma" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [null, null, null, null, null, null]
+      }
+    ];
+
+    /* ══════════════ SLIDER ══════════════ */
+    const track = document.getElementById('sliderTrack');
+    const dotsEl = document.getElementById('dots');
+    const countEl = document.getElementById('slideCount');
+    const total = projects.length;
+    let currentIndex = 0;
+
+    // Build dots
+    projects.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    });
+
+    function getVisibleCount() {
+      const w = window.innerWidth;
+      if (w >= 1024) return 3;
+      if (w >= 640) return 2;
+      return 1;
+    }
+
+    function goTo(index) {
+      currentIndex = Math.max(0, Math.min(index, total - 1));
+      const cards = track.querySelectorAll('.slide-card');
+      const cardWidth = cards[0].offsetWidth + 24; // gap=24
+      track.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+      updateUI();
+    }
+
+    function slide(dir) { goTo(currentIndex + dir); }
+
+    function updateUI() {
+      const vis = getVisibleCount();
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentIndex);
+      });
+      countEl.textContent = `${currentIndex + 1} / ${total}`;
+      document.getElementById('prevBtn').disabled = currentIndex === 0;
+      document.getElementById('nextBtn').disabled = currentIndex >= total - vis;
+    }
+
+    // Sync dots on manual scroll
+    track.addEventListener('scroll', () => {
+      const cards = track.querySelectorAll('.slide-card');
+      if (!cards.length) return;
+      const cardWidth = cards[0].offsetWidth + 24;
+      currentIndex = Math.round(track.scrollLeft / cardWidth);
+      updateUI();
+    });
+
+    updateUI();
+
+    /* ══════════════ MODAL ══════════════ */
+    function openModal(idx) {
+      const p = projects[idx];
+      const backdrop = document.getElementById('modalBackdrop');
+
+      // Hero
+      document.getElementById('modalHero').innerHTML = `
+        <div class="modal-hero-placeholder ${p.bgClass}">${p.emoji}</div>`;
+
+      document.getElementById('modalCategory').textContent = p.category;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalYear').textContent = `Year: ${p.year}`;
+
+      // Tags
+      document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      // Description
+      document.getElementById('modalDesc').textContent = p.desc;
+
+      // Highlights
+      document.getElementById('modalHighlights').innerHTML = p.highlights.map(h => `
+        <div class="bg-[#060611] border border-[#a855f7]/10 rounded-xl p-4 text-center">
+          <div class="text-xl mb-1">${h.icon}</div>
+          <div class="text-base font-bold text-white">${h.val}</div>
+          <div class="text-[11px] text-[#5555a0] mt-0.5">${h.label}</div>
+        </div>`).join('');
+
+      // Links
+      const liveEl = document.getElementById('modalLiveLink');
+      const figmaEl = document.getElementById('modalFigmaLink');
+      if (p.liveLink) { liveEl.href = p.liveLink; liveEl.classList.remove('hidden'); }
+      else { liveEl.classList.add('hidden'); }
+      if (p.figmaLink) { figmaEl.href = p.figmaLink; figmaEl.classList.remove('hidden'); }
+      else { figmaEl.classList.add('hidden'); }
+
+      // Gallery — clicking a thumb opens lightbox
+      const galleryItems = p.gallery;
+      document.getElementById('modalGallery').innerHTML = galleryItems.map((src, i) =>
+        src
+          ? `<div class="img-thumb" onclick="openLightbox(${i})" title="Click to enlarge"><img src="${src}" alt="Screenshot ${i + 1}" loading="lazy" /><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:20px"></i></div></div>`
+          : `<div class="img-thumb placeholder" onclick="openLightbox(${i})" title="Click to enlarge" style="position:relative"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px" class="${p.bgClass} opacity-60"><span style="font-size:1.5rem">🖼️</span></div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:16px"></i></div></div>`
+      ).join('');
+
+      // Store current project gallery for lightbox
+      window._lbGallery = galleryItems;
+      window._lbBgClass = p.bgClass;
+
+      // hover effect for thumb-hover-icon
+      document.querySelectorAll('.img-thumb').forEach(el => {
+        el.addEventListener('mouseenter', () => { const ic = el.querySelector('.thumb-hover-icon'); if (ic) ic.style.opacity = '1'; });
+        el.addEventListener('mouseleave', () => { const ic = el.querySelector('.thumb-hover-icon'); if (ic) ic.style.opacity = '0'; });
+      });
+
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // Reset scroll
+      document.getElementById('modalBox').scrollTop = 0;
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === document.getElementById('modalBackdrop')) closeModal();
+    }
+
+    // Close on Escape / arrow keys
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (lb.classList.contains('open')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+        return;
+      }
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ══════════════ LIGHTBOX ══════════════ */
+    let lbIndex = 0;
+
+    function openLightbox(startIdx) {
+      lbIndex = startIdx;
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      // don't restore scroll — modal is still open
+    }
+
+    function lbNav(dir) {
+      const gallery = window._lbGallery || [];
+      lbIndex = (lbIndex + dir + gallery.length) % gallery.length;
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      const gallery = window._lbGallery || [];
+      const bgClass = window._lbBgClass || '';
+      const src = gallery[lbIndex];
+      const total = gallery.length;
+
+      // Main image area
+      const imgWrap = document.getElementById('lbImgWrap');
+      if (src) {
+        imgWrap.innerHTML = `<img src="${src}" alt="Screenshot ${lbIndex + 1}" />`;
+      } else {
+        imgWrap.innerHTML = `<div class="lightbox-placeholder ${bgClass}">
+          <span>🖼️</span>
+          <span style="font-size:13px;color:rgba(168,85,247,0.7);font-weight:600;letter-spacing:.05em">Add your screenshot here</span>
+          <span style="font-size:11px;color:#5555a0">Update gallery[] in projects data</span>
+        </div>`;
+      }
+
+      // Counter
+      document.getElementById('lbCounter').textContent = `${lbIndex + 1} / ${total}`;
+
+      // Arrows
+      document.getElementById('lbPrev').classList.toggle('disabled', total <= 1);
+      document.getElementById('lbNext').classList.toggle('disabled', total <= 1);
+
+      // Thumbnail strip
+      document.getElementById('lbStrip').innerHTML = gallery.map((s, i) =>
+        s
+          ? `<div class="lb-thumb${i === lbIndex ? ' active' : ''}" onclick="lbNav(${i - lbIndex})"><img src="${s}" /></div>`
+          : `<div class="lb-thumb ph${i === lbIndex ? ' active' : ''} ${bgClass}" onclick="lbNav(${i - lbIndex})" style="opacity:${i === lbIndex ? 1 : 0.45}">🖼️</div>`
+      ).join('');
+    }
+
+    /* ══════════════ REVEAL ══════════════ */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  </script>
+
+  <script>
+    function handleLbBackdrop(e) {
+      // close only if clicking the dark backdrop (not image/controls)
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
   </script>
 </body>
 
