@@ -362,8 +362,6 @@
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid"></div>
-
-        <div class="mt-8 mx-auto md:mx-0 w-full max-w-2xl" id="skills-bars"></div>
       </div>
     </section>
 
@@ -917,10 +915,6 @@
           { ico: '📷', name: 'Photoshop' }, { ico: '📐', name: 'Adobe XD' },
           { ico: '📋', name: 'Jira' }, { ico: '💻', name: 'GitHub' },
           { ico: '⌨️', name: 'VS Code' }, { ico: '📝', name: 'Sublime' }
-        ],
-        bars: [
-          { name: 'Figma', pct: 95 }, { name: 'Adobe Illustrator', pct: 80 },
-          { name: 'Photoshop', pct: 75 }, { name: 'Adobe XD', pct: 85 }
         ]
       },
       ui: {
@@ -929,10 +923,6 @@
           { ico: '🔬', name: 'User Testing' }, { ico: '🎭', name: 'Interaction Design' },
           { ico: '🖼️', name: 'Visual Design' }, { ico: '♿', name: 'Accessibility' },
           { ico: '🔁', name: 'Design Systems' }, { ico: '📊', name: 'UX Research' }
-        ],
-        bars: [
-          { name: 'UI Design', pct: 92 }, { name: 'UX Research', pct: 78 },
-          { name: 'Prototyping', pct: 88 }, { name: 'Design Systems', pct: 82 }
         ]
       },
       frontend: {
@@ -941,10 +931,6 @@
           { ico: '⚡', name: 'JavaScript' }, { ico: '⚛️', name: 'React' },
           { ico: '📦', name: 'Tailwind CSS' }, { ico: '💨', name: 'Bootstrap' },
           { ico: '🔧', name: 'TypeScript' }, { ico: '📡', name: 'REST APIs' }
-        ],
-        bars: [
-          { name: 'HTML / CSS', pct: 95 }, { name: 'JavaScript', pct: 80 },
-          { name: 'React', pct: 75 }, { name: 'Tailwind CSS', pct: 90 }
         ]
       }
     };
@@ -952,7 +938,6 @@
     function renderSkills(key) {
       const d = skillData[key];
       const grid = document.getElementById('skills-grid');
-      const bars = document.getElementById('skills-bars');
 
       /* cards */
       grid.innerHTML = d.cards.map(c => `
@@ -962,25 +947,6 @@
         <div class="text-xs text-[#8888bb] font-medium relative z-10">${c.name}</div>
       </div>
     </div>`).join('');
-
-      /* bars */
-      bars.innerHTML = d.bars.map(b => `
-    <div class="mb-4">
-      <div class="flex justify-between text-xs mb-1.5">
-        <span class="text-[#e8e8f8]">${b.name}</span>
-        <span class="text-[#c084fc] font-semibold">${b.pct}%</span>
-      </div>
-      <div class="h-1.5 bg-[#a855f7]/10 rounded-sm overflow-hidden">
-        <div class="h-full bg-gradient-to-r from-[#7c3aed] via-[#a855f7] to-[#c084fc] rounded-sm" style="width:0%; transition: width 0.8s cubic-bezier(.4,0,.2,1)" data-target="${b.pct}%"></div>
-      </div>
-    </div>`).join('');
-
-      /* animate bars after a tick */
-      setTimeout(() => {
-        document.querySelectorAll('[data-target]').forEach(el => {
-          el.style.width = el.dataset.target;
-        });
-      }, 80);
     }
 
     document.querySelectorAll('.nav-stab').forEach(btn => {
