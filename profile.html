@@ -352,10 +352,10 @@
         <div class="flex flex-wrap gap-1 mb-8 bg-[#0d0d1a] rounded-xl p-1.5 border border-[#a855f7]/10 w-fit reveal">
           <button
             class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)] active"
-            data-tab="tools">Tools</button>
+            data-tab="ui">UI / UX</button>
           <button
             class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
-            data-tab="ui">UI / UX</button>
+            data-tab="tools">Tools</button>
           <button
             class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
             data-tab="frontend">Frontend</button>
@@ -911,26 +911,38 @@
     const skillData = {
       tools: {
         cards: [
-          { ico: '🎨', name: 'Figma' }, { ico: '🖌️', name: 'Adobe Illustrator' },
-          { ico: '📷', name: 'Photoshop' }, { ico: '📐', name: 'Adobe XD' },
-          { ico: '📋', name: 'Jira' }, { ico: '💻', name: 'GitHub' },
-          { ico: '⌨️', name: 'VS Code' }, { ico: '📝', name: 'Sublime' }
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Figma">', name: 'Figma' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Adobe Illustrator">', name: 'Adobe Illustrator' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Photoshop">', name: 'Photoshop' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Adobe XD">', name: 'Adobe XD' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Jira">', name: 'Jira' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="GitHub">', name: 'GitHub' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="VS Code">', name: 'VS Code' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Sublime">', name: 'Sublime' }
         ]
       },
       ui: {
         cards: [
-          { ico: '🗂️', name: 'Wireframing' }, { ico: '📱', name: 'Prototyping' },
-          { ico: '🔬', name: 'User Testing' }, { ico: '🎭', name: 'Interaction Design' },
-          { ico: '🖼️', name: 'Visual Design' }, { ico: '♿', name: 'Accessibility' },
-          { ico: '🔁', name: 'Design Systems' }, { ico: '📊', name: 'UX Research' }
+          { ico: '<img src="./assets/images/icons/ui-ux/wireframing.gif" class="w-8 h-8" alt="Wireframing">', name: 'Wireframing' },
+          { ico: '<img src="./assets/images/icons/ui-ux/prototyping.gif" class="w-8 h-8" alt="Prototyping">', name: 'Prototyping' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ab-testing.gif" class="w-8 h-8" alt="User Testing">', name: 'User Testing' },
+          { ico: '<img src="./assets/images/icons/ui-ux/mockup-design.gif" class="w-8 h-8" alt="Interaction Design">', name: 'Interaction Design' },
+          { ico: '<img src="./assets/images/icons/ui-ux/visual-design.gif" class="w-8 h-8" alt="Visual Design">', name: 'Visual Design' },
+          { ico: '<img src="./assets/images/icons/ui-ux/mobile-app-design.gif" class="w-8 h-8" alt="Accessibility">', name: 'Accessibility' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-8 h-8" alt="Design Systems">', name: 'Design Systems' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-8 h-8" alt="UX Research">', name: 'UX Research' }
         ]
       },
       frontend: {
         cards: [
-          { ico: '🌐', name: 'HTML5' }, { ico: '🎨', name: 'CSS3' },
-          { ico: '⚡', name: 'JavaScript' }, { ico: '⚛️', name: 'React' },
-          { ico: '📦', name: 'Tailwind CSS' }, { ico: '💨', name: 'Bootstrap' },
-          { ico: '🔧', name: 'TypeScript' }, { ico: '📡', name: 'REST APIs' }
+          { ico: '<img src="./assets/images/icons/frontend/html.gif" class="w-8 h-8" alt="HTML5">', name: 'HTML5' },
+          { ico: '<img src="./assets/images/icons/frontend/css.gif" class="w-8 h-8" alt="CSS3">', name: 'CSS3' },
+          { ico: '<img src="./assets/images/icons/frontend/js.gif" class="w-8 h-8" alt="JavaScript">', name: 'JavaScript' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="React">', name: 'React' },
+          { ico: '<img src="./assets/images/icons/frontend/ai-file.gif" class="w-8 h-8" alt="Tailwind CSS">', name: 'Tailwind CSS' },
+          { ico: '<img src="./assets/images/icons/frontend/bootstrap.gif" class="w-8 h-8" alt="Bootstrap">', name: 'Bootstrap' },
+          { ico: '<img src="./assets/images/icons/frontend/js.gif" class="w-8 h-8" alt="TypeScript">', name: 'TypeScript' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="REST APIs">', name: 'REST APIs' }
         ]
       }
     };
@@ -958,7 +970,7 @@
     });
 
     /* init */
-    renderSkills('tools');
+    renderSkills('ui');
 
     /* ── NAVBAR SCROLL ──────────────────────────────────────────────── */
     window.addEventListener('scroll', () => {
