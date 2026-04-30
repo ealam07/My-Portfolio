@@ -1257,7 +1257,7 @@
       backdrop.classList.add('open');
       document.body.style.overflow = 'hidden';
       // Reset scroll
-      document.getElementById('modalBox').scrollTop = 0;
+      backdrop.scrollTop = 0;
     }
 
     function closeModal() {
@@ -1286,6 +1286,8 @@
 
     function openLightbox(startIdx) {
       lbIndex = startIdx;
+      document.getElementById('lightbox').classList.remove('zoomed');
+      document.getElementById('lbImgWrap').classList.remove('zoomed');
       renderLightbox();
       document.getElementById('lightbox').classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -1299,6 +1301,8 @@
     function lbNav(dir) {
       const gallery = window._lbGallery || [];
       lbIndex = (lbIndex + dir + gallery.length) % gallery.length;
+      document.getElementById('lightbox').classList.remove('zoomed');
+      document.getElementById('lbImgWrap').classList.remove('zoomed');
       renderLightbox();
     }
 
@@ -1311,7 +1315,7 @@
       // Main image area
       const imgWrap = document.getElementById('lbImgWrap');
       if (src) {
-        imgWrap.innerHTML = `<img src="${src}" alt="Screenshot ${lbIndex + 1}" />`;
+        imgWrap.innerHTML = `<img src="${src}" alt="Screenshot ${lbIndex + 1}" onclick="toggleZoom(event)" />`;
       } else {
         imgWrap.innerHTML = `<div class="lightbox-placeholder ${bgClass}">
           <span>🖼️</span>
@@ -1333,6 +1337,17 @@
           ? `<div class="lb-thumb${i === lbIndex ? ' active' : ''}" onclick="lbNav(${i - lbIndex})"><img src="${s}" /></div>`
           : `<div class="lb-thumb ph${i === lbIndex ? ' active' : ''} ${bgClass}" onclick="lbNav(${i - lbIndex})" style="opacity:${i === lbIndex ? 1 : 0.45}">🖼️</div>`
       ).join('');
+    }
+
+    function toggleZoom(e) {
+      if (e) e.stopPropagation();
+      const lb = document.getElementById('lightbox');
+      const wrap = document.getElementById('lbImgWrap');
+      lb.classList.toggle('zoomed');
+      wrap.classList.toggle('zoomed');
+      if (lb.classList.contains('zoomed')) {
+        lb.scrollTop = 0;
+      }
     }
 
     /* ══════════════ REVEAL ══════════════ */
