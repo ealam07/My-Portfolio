@@ -78,7 +78,7 @@
                 href="#skills">Skills</a></li>
             <li><a
                 class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
-                href="#portfolio">Portfolio</a></li>
+                href="#projects">Projects</a></li>
             <li><a
                 class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
                 href="#education">Education</a></li>
@@ -358,6 +358,9 @@
             data-tab="tools">Tools</button>
           <button
             class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="ai">AI Tools</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
             data-tab="frontend">Frontend</button>
         </div>
 
@@ -368,27 +371,16 @@
     <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
 
     <!-- ── PORTFOLIO ───────────────────────────────────────────────── -->
-    <section id="portfolio" class="portfolio-section py-16 md:py-24 relative z-10 overflow-hidden">
+    <section id="projects" class="portfolio-section py-16 md:py-24 relative z-10 overflow-hidden">
       <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
 
         <!-- Header -->
-        <div class="flex items-end justify-between mb-10 reveal">
-          <div>
-            <div
-              class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
-              Selected Work</div>
-            <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">My <span
-                class="text-transparent" style="-webkit-text-stroke:1px rgba(168,85,247,.22)">Portfolio</span></div>
-          </div>
-          <!-- Arrow controls -->
-          <div class="flex items-center gap-3">
-            <button class="arrow-btn" id="prevBtn" onclick="slide(-1)">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="arrow-btn" id="nextBtn" onclick="slide(1)">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
+        <div class="text-right mb-10 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Selected Work</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">My <span
+              class="text-transparent" style="-webkit-text-stroke:1px rgba(168,85,247,.22)">Projects</span></div>
         </div>
 
         <!-- Slider -->
@@ -398,7 +390,7 @@
           <div class="slide-card">
             <div class="project-card" onclick="openModal(0)">
               <div class="card-thumb bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
-                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/autofintech-home.jpg">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/DashOrbit/thumbnail.webp">
                 </div>
                 <div class="card-overlay">
                   <button class="overlay-btn">View Details</button>
@@ -406,13 +398,12 @@
               </div>
               <div
                 class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
-                UI Design</div>
+                UI/UX & React</div>
               <div class="p-5 flex-1 flex flex-col">
-                <div class="text-sm font-bold text-white mb-1.5">AutoFintech – Home</div>
-                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Full homepage UI for a fintech auto platform
-                  with hero, features, and CTA sections with responsive layouts.</div>
+                <div class="text-sm font-bold text-white mb-1.5">DashOrbit</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designing intuitive and visually appealing web interfaces (UI/UX) and developing responsive web applications using React.js; implementing frontend functionality based on design.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span class="tag">Figma</span><span class="tag">UI Design</span><span class="tag">Responsive</span>
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">React.js</span><span class="tag">Responsive</span>
                 </div>
               </div>
             </div>
@@ -422,7 +413,8 @@
           <div class="slide-card">
             <div class="project-card" onclick="openModal(1)">
               <div class="card-thumb bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
-                <div class="card-thumb-placeholder">📊</div>
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/AutofintechCRM/thumbnail.webp">
+                </div>
                 <div class="card-overlay">
                   <button class="overlay-btn">View Details</button>
                 </div>
@@ -432,10 +424,9 @@
                 Dashboard</div>
               <div class="p-5 flex-1 flex flex-col">
                 <div class="text-sm font-bold text-white mb-1.5">CRM – AutoFintech</div>
-                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Customer relationship dashboard with data
-                  tables, tracking, and interactive filtering components.</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span class="tag">React</span><span class="tag">Dashboard</span><span class="tag">CRM</span>
+                  <span class="tag">UI/UX</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
                 </div>
               </div>
             </div>
@@ -445,7 +436,8 @@
           <div class="slide-card">
             <div class="project-card" onclick="openModal(2)">
               <div class="card-thumb bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
-                <div class="card-thumb-placeholder">🏷️</div>
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/AutofintechHome/Thumbnail.webp">
+                </div>
                 <div class="card-overlay">
                   <button class="overlay-btn">View Details</button>
                 </div>
@@ -454,11 +446,10 @@
                 class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
                 Web Design</div>
               <div class="p-5 flex-1 flex flex-col">
-                <div class="text-sm font-bold text-white mb-1.5">White Label Site – Autofintech</div>
-                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Rebrandable white-label website with modular
-                  components adaptable to multiple partner brands.</div>
+                <div class="text-sm font-bold text-white mb-1.5">AutoFintech – Home</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.</div>
                 <div class="flex gap-1.5 flex-wrap mt-3">
-                  <span class="tag">HTML/CSS</span><span class="tag">Tailwind</span><span class="tag">Branding</span>
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
                 </div>
               </div>
             </div>
@@ -535,10 +526,17 @@
 
         </div><!-- /slider-track -->
 
-        <!-- Progress dots + count -->
+        <!-- Progress dots + arrow controls -->
         <div class="flex items-center justify-between mt-5 reveal">
           <div class="flex items-center gap-2" id="dots"></div>
-          <div class="text-xs text-[#5555a0]" id="slideCount">1 / 6</div>
+          <div class="flex items-center gap-3">
+            <button class="arrow-btn" id="prevBtn" onclick="slide(-1)">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="arrow-btn" id="nextBtn" onclick="slide(1)">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -582,7 +580,7 @@
           <p class="text-sm text-[#8888bb] leading-loose mb-8" id="modalDesc"></p>
 
           <!-- Highlights -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8" id="modalHighlights"></div>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-8" id="modalHighlights"></div>
 
           <!-- Image Gallery -->
           <div id="gallerySection">
@@ -626,8 +624,8 @@
           <div
             class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
             Academic Background</div>
-          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">Education <span
-              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">&amp; Certs</span></div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">My <span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]"> Education</span></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 mt-2">
           <div class="reveal">
@@ -912,7 +910,7 @@
       tools: {
         cards: [
           { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Figma">', name: 'Figma' },
-          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Adobe Illustrator">', name: 'Adobe Illustrator' },
+          { ico: '<img src="./assets/images/icons/frontend/ai-file.gif" class="w-8 h-8" alt="Adobe Illustrator">', name: 'Adobe Illustrator' },
           { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Photoshop">', name: 'Photoshop' },
           { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Adobe XD">', name: 'Adobe XD' },
           { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Jira">', name: 'Jira' },
@@ -943,6 +941,18 @@
           { ico: '<img src="./assets/images/icons/frontend/bootstrap.gif" class="w-8 h-8" alt="Bootstrap">', name: 'Bootstrap' },
           { ico: '<img src="./assets/images/icons/frontend/js.gif" class="w-8 h-8" alt="TypeScript">', name: 'TypeScript' },
           { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="REST APIs">', name: 'REST APIs' }
+        ]
+      },
+      ai: {
+        cards: [
+          { ico: '🤖', name: 'ChatGPT' },
+          { ico: '🎨', name: 'Figma Make' },
+          { ico: '⚡', name: 'V0.dev' },
+          { ico: '❤️', name: 'Lovable' },
+          { ico: '🧠', name: 'Manus' },
+          { ico: '🚀', name: 'Grok' },
+          { ico: '🧵', name: 'Google Stitch' },
+          { ico: '⚙️', name: 'Figma MCP' }
         ]
       }
     };
@@ -984,7 +994,7 @@
       }
 
       /* active link */
-      const sections = ['hero', 'experience', 'skills', 'portfolio', 'education', 'about'];
+      const sections = ['hero', 'experience', 'skills', 'projects', 'education', 'about'];
       let current = '';
       sections.forEach(id => {
         const el = document.getElementById(id);
@@ -1017,26 +1027,28 @@
     ══════════════════════════════════ */
     const projects = [
       {
-        title: "AutoFintech – Home",
-        category: "UI Design",
+        title: "DashOrbit",
+        category: "UI/UX & React",
         year: "2023",
         gradient: "from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
         bgClass: "bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
-        emoji: "<img src='./assets/images/portfolioBanners/autofintech-home.jpg'>",
-        tags: ["Figma", "UI Design", "Responsive", "Fintech"],
-        desc: "Full homepage UI design for a fintech auto platform, including hero section, feature highlights, testimonials, and CTA sections. The design focused on trust signals, clean typography, and conversion-optimized layouts — built to scale across mobile and desktop breakpoints.",
+        emoji: "<img src='./assets/images/portfolioBanners/DashOrbit/thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "React.js", "Responsive"],
+        desc: "Designing intuitive and visually appealing web interfaces (UI/UX) and developing responsive web applications using React.js; implementing frontend functionality based on design.",
         highlights: [
-          { icon: "🖼️", label: "Screens", val: "12+" },
-          { icon: "📱", label: "Responsive", val: "3 sizes" },
-          { icon: "⏱️", label: "Duration", val: "3 weeks" }
+          { icon: "🖼️", label: "Screens", val: "15+" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "⚛️", label: "Framework", val: "React.js" }
         ],
         liveLink: "",
         figmaLink: "",
-        // Add real image paths like: "./assets/images/autofintech-1.png"
-        gallery: ["./assets/images/portfolioBanners/autofintech-home.jpg",
-          "./assets/images/portfolioBanners/crm-autofintech.jpg",
-          "./assets/images/portfolioBanners/white-label-site-autofintech.jpg",
-          "./assets/images/portfolioBanners/motorlend.png",
+        gallery: [
+          "./assets/images/portfolioBanners/DashOrbit/Signin page Super Admin Improvised.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Brand list.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Google Analytics.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Wordpress.webp",
+          "./assets/images/portfolioBanners/DashOrbit/facebook Page Analytics.webp"
         ]
       },
       {
@@ -1044,34 +1056,46 @@
         category: "Dashboard",
         year: "2023",
         bgClass: "bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]",
-        emoji: "📊",
-        tags: ["React", "Dashboard", "CRM", "Data Tables"],
-        desc: "A feature-rich CRM dashboard built with React for the AutoFintech platform. Includes customer relationship tracking, interactive data tables with sorting & filtering, deal pipeline visualization, and a notification system. Focused on data clarity and fast task completion for sales teams.",
+        emoji: "<img src='./assets/images/portfolioBanners/AutofintechCRM/thumbnail.webp'>",
+        tags: ["UI/UX", "HTML/CSS", "Bootstrap"],
+        desc: "Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.",
         highlights: [
-          { icon: "⚛️", label: "Built with", val: "React" },
-          { icon: "📋", label: "Modules", val: "8 screens" },
-          { icon: "⏱️", label: "Duration", val: "5 weeks" }
+          { icon: "🖼️", label: "Screens", val: "5+" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "🛠️", label: "Framework", val: "Bootstrap" }
         ],
         liveLink: "",
         figmaLink: "",
-        gallery: [null, null, null, null, null, null]
+        gallery: [
+          "./assets/images/portfolioBanners/AutofintechCRM/Activity.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Approvals.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Send to Lender.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Summary.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Task.webp"
+        ]
       },
       {
-        title: "White Label Site – Autofintech",
+        title: "AutoFintech – Home",
         category: "Web Design",
         year: "2024",
         bgClass: "bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]",
-        emoji: "🏷️",
-        tags: ["HTML/CSS", "Tailwind", "Branding", "Multi-brand"],
-        desc: "Designed and built a rebrandable white-label website system for AutoFintech's partner network. Modular component architecture lets partners swap colors, logos, and copy without touching layout code. Supports 5+ brand themes and passed WCAG 2.1 AA accessibility checks.",
+        emoji: "<img src='./assets/images/portfolioBanners/AutofintechHome/Thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "HTML/CSS", "Bootstrap"],
+        desc: "Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.",
         highlights: [
-          { icon: "🎨", label: "Brand themes", val: "5+" },
-          { icon: "♿", label: "Accessibility", val: "WCAG AA" },
-          { icon: "📦", label: "Components", val: "30+" }
+          { icon: "🖼️", label: "Screens", val: "3" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "🛠️", label: "Framework", val: "Bootstrap" }
         ],
         liveLink: "",
         figmaLink: "",
-        gallery: [null, null, null, null, null, null]
+        gallery: [
+          "./assets/images/portfolioBanners/AutofintechHome/Landing Page.webp",
+          "./assets/images/portfolioBanners/AutofintechHome/Cyber Essentials Certification.webp",
+          "./assets/images/portfolioBanners/AutofintechHome/News.webp"
+        ]
       },
       {
         title: "Infowatch Daily",
@@ -1129,7 +1153,6 @@
     /* ══════════════ SLIDER ══════════════ */
     const track = document.getElementById('sliderTrack');
     const dotsEl = document.getElementById('dots');
-    const countEl = document.getElementById('slideCount');
     const total = projects.length;
     let currentIndex = 0;
 
@@ -1163,7 +1186,6 @@
       document.querySelectorAll('.dot').forEach((d, i) => {
         d.classList.toggle('active', i === currentIndex);
       });
-      countEl.textContent = `${currentIndex + 1} / ${total}`;
       document.getElementById('prevBtn').disabled = currentIndex === 0;
       document.getElementById('nextBtn').disabled = currentIndex >= total - vis;
     }
