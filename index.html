@@ -2,753 +2,1295 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ehtesham Alam | UI/UX Designer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ehtesham Alam | UI/UX Designer & Frontend Developer</title>
 
-    <!-- SEO / Social (examples) -->
-    <meta name="description" content="Short page description" />
-    <meta property="og:title" content="Page title for social" />
-    <meta property="og:description" content="Description for social" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/styles.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Custom CSS for keyframes -->
+  <link href="assets/css/profile.css" rel="stylesheet" />
 </head>
 
-<body>
+<body
+  class="font-['Inter'] bg-[#060611] text-[#e8e8f8] overflow-x-hidden relative w-full min-h-screen text-base max-w-[100vw]">
 
-    <div class="blob"></div>
-    <!-- <div class="h-screen w-full px-20"> -->
-    <div class="xl:container mx-auto px-20">
+  <!-- Main Wrapper to force no x-scroll on mobile -->
+  <div class="w-full overflow-x-hidden relative">
 
-        <!-- Header Start -->
-        <div class="w-full">
-            <div class="bg-transparent">
-                <div class="container mx-auto">
-                    <div class="flex items-center justify-between py-4">
-                        <div>
-                            <a href='./'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21"
-                                    fill="none">
-                                    <path
-                                        d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
-                                        fill="#FF00F2" />
-                                    <path
-                                        d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="hidden sm:flex sm:items-center menu-items">
-                            <a href="#hero"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Home</a>
-                            <a href="#experience"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Experience</a>
-                            <a href="#skills"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Skills</a>
-                            <a href="#portfolio"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Portfolio</a>
-                            <a href="#"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)] mr-8">Education</a>
-                            <a href="#"
-                                class="text-white text-sm font-semibold hover:text-[var(--primary-color)]">About</a>
-                        </div>
-
-                        <div class="hidden sm:flex sm:items-center">
-                            <a href="#" class="text-white text-sm font-semibold mr-4 px-6 py-3 rounded-lg bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]
-                                ">Contact Me</a>
-                            <a download href="./assets/file/Resume.docx" class="relative inline-block p-[1px] rounded-lg 
-                                        bg-[linear-gradient(270deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
-                                <span class="block bg-black hover:bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)] 
-                                        text-white text-sm font-semibold px-[23px] py-[11px] rounded-lg">
-                                    Resume
-                                </span>
-                            </a>
-                        </div>
-
-                        <div class="sm:hidden cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12.9499909,17 C12.7183558,18.1411202 11.709479,19 10.5,19 C9.29052104,19 8.28164422,18.1411202 8.05000906,17 L3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L8.05000906,16 C8.28164422,14.8588798 9.29052104,14 10.5,14 C11.709479,14 12.7183558,14.8588798 12.9499909,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 L12.9499909,17 Z M18.9499909,12 C18.7183558,13.1411202 17.709479,14 16.5,14 C15.290521,14 14.2816442,13.1411202 14.0500091,12 L3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L14.0500091,11 C14.2816442,9.85887984 15.290521,9 16.5,9 C17.709479,9 18.7183558,9.85887984 18.9499909,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L18.9499909,12 Z M9.94999094,7 C9.71835578,8.14112016 8.70947896,9 7.5,9 C6.29052104,9 5.28164422,8.14112016 5.05000906,7 L3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L5.05000906,6 C5.28164422,4.85887984 6.29052104,4 7.5,4 C8.70947896,4 9.71835578,4.85887984 9.94999094,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L9.94999094,7 Z M7.5,8 C8.32842712,8 9,7.32842712 9,6.5 C9,5.67157288 8.32842712,5 7.5,5 C6.67157288,5 6,5.67157288 6,6.5 C6,7.32842712 6.67157288,8 7.5,8 Z M16.5,13 C17.3284271,13 18,12.3284271 18,11.5 C18,10.6715729 17.3284271,10 16.5,10 C15.6715729,10 15,10.6715729 15,11.5 C15,12.3284271 15.6715729,13 16.5,13 Z M10.5,18 C11.3284271,18 12,17.3284271 12,16.5 C12,15.6715729 11.3284271,15 10.5,15 C9.67157288,15 9,15.6715729 9,16.5 C9,17.3284271 9.67157288,18 10.5,18 Z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="block sm:hidden bg-white border-t-2 py-2">
-                        <div class="flex flex-col">
-                            <a href="#"
-                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Products</a>
-                            <a href="#"
-                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Marketplace</a>
-                            <a href="#"
-                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Partners</a>
-                            <a href="#"
-                                class="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Pricing</a>
-                            <div class="flex justify-between items-center border-t-2 pt-2">
-                                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign
-                                    in</a>
-                                <a href="#"
-                                    class="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign
-                                    up</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-    </div>
-    <div id="hero" class="xl:container mx-auto px-20 border-b-[3px] border-transparent"
-        style="border-image: linear-gradient(90deg, rgba(17,0,255,0.8), rgba(255,0,242,0.6)) 1;">
-        <div class="hero-section py-15 border-b-[3px] border-transparent">
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-7">
-                    <div class="space-y-4">
-
-                        <h1 class="text-white text-6xl font-bold">
-                            <div class="flex items-center gap-3">
-                                <img src='./assets/images/hey.svg' />
-                                I<span class="text-[var(--primary-color)]">’</span>m
-                            </div>
-                            <span class="text-white">
-                                Ehtesham Alam
-                            </span>
-                        </h1>
-
-                        <div
-                            class="h-[1px] w-60 bg-gradient-to-r from-[var(--secondary-color)] to-[var(--primary-color)] my-18">
-                        </div>
-
-                        <h3 class="text-gray-300 text-4xl font-light leading-14">
-                            UI/UX Designer <span class="text-pink-500">&</span><br /> Frontend Developer
-                        </h3>
-
-                        <div class="flex gap-4 pt-6">
-                            <a href="#" class="text-white text-sm font-semibold px-6 py-3 rounded-lg
-                    bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
-                                Hire Me
-                            </a>
-
-                            <a href="#" class="relative inline-block p-[1px] rounded-lg 
-                    bg-[linear-gradient(270deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]">
-                                <span class="block bg-black hover:bg-[linear-gradient(90deg,rgba(17,0,255,0.8)_0%,rgba(255,0,242,0.6)_100%)]
-                      text-white text-sm font-semibold px-6 py-3 rounded-lg">
-                                    Check Skills
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-5 relative">
-                    <img class="w-full" src='./assets/images/hero_img.svg' />
-                    <h6
-                        class="text-3xl total_experience rotate-270 absolute top-18 left-2 text-white font-bold text-right tracking-wider">
-                        <span class="text-[var(--primary-color)]">3+</span> Years<span
-                            class="text-lg font-normal block">Experince</span>
-                    </h6>
-                    <div class="flex flex-col justify-between gap-2 absolute bottom-2 left-2">
-                        <a href="#">
-                            <img src="./assets/images/Linkedin.svg">
-                        </a>
-                        <a href="#">
-                            <img src="./assets/images/Naukri.svg">
-                        </a>
-                        <a href="#">
-                            <img src="./assets/images/Facebook.svg">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="experience" class="xl:container mx-auto p-20 relative">
-        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
-        <div class="flex justify-end">
-            <img src="./assets/images/sectionHeadings/Experience.svg">
-        </div>
-
-        <div class="grid grid-cols-12 gap-8 w-full py-20">
-
-            <div class="col-span-1"></div>
-
-            <div class="col-span-5 relative">
-                <!-- Hexagon -->
-                <div class="absolute top-4 right-10">
-                    <div class="relative w-full h-full">
-                        <div class="absolute left-0 top-0 w-[28px] h-[24px] bg-[#FF00F2]/30 clip-hex"></div>
-                        <div class="absolute left-[5px] top-[4px] w-[18px] h-[16px] bg-[#FF00F2] clip-hex"></div>
-                    </div>
-                </div>
-
-                <img class="absolute top-0 left-0 w-full z-10" src="./assets/images/exp_card.svg">
-                <div class="p-12 z-20 relative">
-                    <h5 class="text-[var(--primary-color)] text-center text-xl">Technoarray Web Solutions</h5>
-                    <div class="text-md text-white flex justify-center items-center my-8">
-                        Web Designer
-                        <span
-                            class="w-2 h-2 rounded-full bg-[linear-gradient(to_right,rgba(17,0,255,0.8),rgba(255,0,242,0.6))] mx-4"></span>
-                        May 2022 – July 2025
-                    </div>
-                    <p class="text-white/60 text-center text-md">At Technoarray, I designed user-friendly web
-                        interfaces, working with developers and product managers to meet project goals. I used Figma to
-                        create wireframes and prototypes, conducted user testing, and refined designs based on feedback.
-                        I also built responsive layouts with HTML, CSS And Bootstrap, ensuring cross-browser
-                        compatibility and device optimization while following the latest UI/UX trends.</p>
-                </div>
-            </div>
-            <div class="col-span-5 relative">
-                <div class="h-1 w-22 bg-[#FF00F2]/10 absolute left-[-60px] top-[26px]"></div>
-                <!-- Hexagon -->
-                <div class="absolute top-4 left-4">
-                    <div class="relative w-full h-full">
-                        <div class="absolute left-0 top-0 w-[28px] h-[24px] bg-[#FF00F2]/30 clip-hex"></div>
-                        <div class="absolute left-[5px] top-[4px] w-[18px] h-[16px] bg-[#FF00F2] clip-hex"></div>
-                    </div>
-                </div>
-                <img class="absolute top-0 left-0 w-full scale-x-[-1] z-10" src="./assets/images/exp_card.svg">
-                <div class="p-12 z-20 relative">
-                    <h5 class="text-[var(--primary-color)] text-center text-xl">Anteriad</h5>
-                    <div class="text-md text-white flex justify-center items-center my-8">
-                        Web Designer
-                        <span
-                            class="w-2 h-2 rounded-full bg-[linear-gradient(to_right,rgba(17,0,255,0.8),rgba(255,0,242,0.6))] mx-4"></span>
-                        July 2025 – Present
-                    </div>
-                    <p class="text-white/60 text-center text-md">At Anteriad, I focus on UI/UX design and front-end
-                        development. I designed the complete UI for platforms like Infowatch Daily and TechVersions,
-                        creating mockups that align with user needs and brand identity. Alongside design, I also worked
-                        on a React-based dashboard project, building front-end interfaces for blogs and resource
-                        websites with responsive and interactive components.</p>
-                </div>
-            </div>
-
-            <div class="col-span-1"></div>
-
-        </div>
-
-    </div>
-    <div id="skills" class="xl:container mx-auto p-20 pt-0 relative">
-        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
-        <div class="flex justify-start">
-            <img src="./assets/images/sectionHeadings/Skills.svg">
-        </div>
-
-        <div class="grid grid-cols-12 gap-8 w-full py-20">
-
-            <div class="col-span-3">
-                <ul class="space-y-6">
-                    <li>
-                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
-               border-l-4 text-pink-500 border-pink-500 hover:text-pink-500 hover:border-pink-500" data-tab="uiux">
-                            UI / UX
-                        </button>
-                    </li>
-
-                    <li>
-                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
-               border-l-4 border-transparent text-white
-               hover:text-pink-500 hover:border-pink-500 transition" data-tab="frontend">
-                            Frontend
-                        </button>
-                    </li>
-
-                    <li>
-                        <button class="tab-btn cursor-pointer w-full text-left text-lg font-medium pl-4
-               border-l-4 border-transparent text-white
-               hover:text-pink-500 hover:border-pink-500 transition" data-tab="tools">
-                            Tools
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-span-9">
-                <div id="uiux" class="tab-content grid grid-cols-12 gap-8 w-full">
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/visual-design.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Visual Design</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/wireframing.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Wireframing</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/prototyping.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Prototyping</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/mockup-design.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Mockup Design</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">UX Research</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/ab-testing.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">A/B Testing</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/ui-ux/mobile-app-design.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Mobile App Design</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="frontend" class="tab-content hidden grid grid-cols-12 gap-8 w-full">
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/html.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">HTML</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/css.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">CSS</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/bootstrap.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Bootstrap</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/ai-file.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Tailwind</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/js.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Javascript</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">React</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="tools" class="tab-content hidden grid grid-cols-12 gap-8 w-full">
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Figma</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Adobe illustrator</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Photoshop</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Adobe XD</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Jira</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">GitHub</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">VS Code</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-3">
-                        <div class="skills-card p-6">
-                            <div class="flex items-center flex-col gap-6">
-                                <img src="./assets/images/icons/frontend/react.gif" class="w-[65px] h-[65px]"
-                                    alt="Wireframing">
-
-                                <h6 class="text-lg text-white bg-transparent">Sublime</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="portfolio" class="xl:container mx-auto p-20 pt-0 relative">
-        <!-- <img class="absolute bottom-40 left-0" src="./assets/images/curve_line.svg"> -->
-        <div class="flex justify-end">
-            <img src="./assets/images/sectionHeadings/Portfolio.svg">
-        </div>
-
-        <div class="relative py-20">
-
-            <!-- Slider Track -->
-            <div id="slider"
-                class="flex gap-6 overflow-x-auto no-scrollbar">
-
-                <!-- CARD -->
-                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
-                    <div class="portfolio-card p-3">
-                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/autofintech-home.jpg">
-                        <div class="portfolio-content p-3">
-                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">AutoFintech - Home</h6>
-                            <p class="text-white/60 text-center text-md mt-8">
-                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                                top business leaders leverage AI and Machine Learning to build sales pipelines.
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-
-                <!-- CARD -->
-                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
-                    <div class="portfolio-card p-3">
-                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/autofintech-home.jpg">
-                        <div class="portfolio-content p-3">
-                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">AutoFintech - Home</h6>
-                            <p class="text-white/60 text-center text-md mt-8">
-                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                                top business leaders leverage AI and Machine Learning to build sales pipelines.
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-
-                <!-- CARD -->
-                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
-                    <div class="portfolio-card p-3">
-                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/crm-autofintech.jpg">
-                        <div class="portfolio-content p-3">
-                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">CRM - AutoFintech</h6>
-                            <p class="text-white/60 text-center text-md mt-8">
-                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                                top business leaders leverage AI and Machine Learning to build sales pipelines.
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-
-                <!-- CARD -->
-                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
-                    <div class="portfolio-card p-3">
-                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/white-label-site-autofintech.jpg">
-                        <div class="portfolio-content p-3">
-                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">White Label Site - Autofintech</h6>
-                            <p class="text-white/60 text-center text-md mt-8">
-                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                                top business leaders leverage AI and Machine Learning to build sales pipelines.
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-
-                <!-- CARD -->
-                <div class="min-w-full sm:min-w-[48%] lg:min-w-[32%] snap-center">
-                    <div class="portfolio-card p-3">
-                        <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/motorlend.png">
-                        <div class="portfolio-content p-3">
-                            <h6 class="text-2xl text-white font-medium bg-transparent text-center">Motorlend</h6>
-                            <p class="text-white/60 text-center text-md mt-8">
-                                Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                                how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                                top business leaders leverage AI and Machine Learning to build sales pipelines.
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-
-            </div>
-            <!-- Slider Button -->
-            <div class="flex justify-center mt-12">
-                <div id="scrollTrack"
-                    class="relative w-34 h-4 bg-transparent rounded-full cursor-pointer">
-
-                    <div id="scrollThumb"
-                        class="absolute top-1 left-1 h-2 w-12 bg-pink-500 rounded-full cursor-pointer transition-none">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="grid grid-cols-12 gap-8 w-full py-20">
-
-            <div class="col-span-4">
-                <div class="portfolio-card p-3">
-                    <img class="rounded-3xl mb-6" src="./assets/images/portfolioBanners/crm-autofintech.jpg">
-                    <div class="portfolio-content p-3">
-                        <h6 class="text-2xl text-white font-medium bg-transparent text-center">CRM - AutoFintech</h6>
-                        <p class="text-white/60 text-center text-md mt-8">
-                            Learn how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn
-                            how top business leaders leverage AI and Machine Learning to build sales pipelines. Learn how
-                            top business leaders leverage AI and Machine Learning to build sales pipelines.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+    <!-- Background orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[500px] h-[500px] bg-[#7c3aed] -top-[150px] -left-[150px] animate-[orbFloat_14s_ease-in-out_infinite]">
+      </div>
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[350px] h-[350px] bg-[#a855f7] top-[30%] -right-[100px] animate-[orbFloat_14s_ease-in-out_infinite_3s] !delay-[3000ms]">
+      </div>
+      <div
+        class="absolute rounded-full blur-[90px] opacity-15 w-[280px] h-[280px] bg-[#6d28d9] bottom-[10%] left-[25%] animate-[orbFloat_14s_ease-in-out_infinite_7s] !delay-[7000ms]">
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-        function initGradientFollow() {
-            const blob = document.querySelector(".blob");
-            if (!blob) return;
+    <!-- ── NAVBAR ──────────────────────────────────────────────────── -->
+    <nav id="mainNav"
+      class="fixed top-0 w-full z-[1000] bg-transparent backdrop-blur-xl border-b border-[#a855f7]/15 py-3.5 transition-all duration-300">
+      <div
+        class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3 flex flex-wrap items-center justify-between relative">
+        <a class="text-lg font-black italic tracking-widest text-white no-underline" href="#hero">
+          <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21" fill="none">
+            <path
+              d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
+              fill="#c084fc"></path>
+            <path
+              d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
+              fill="white"></path>
+          </svg>
+        </a>
 
-            const handleMouseMove = (e) => {
-                blob.style.left = `${e.clientX}px`;
-                blob.style.top = `${e.clientY}px`;
-            };
+        <button
+          class="lg:hidden border border-[#a855f7]/40 p-2 rounded text-white navbar-toggler hover:bg-[#a855f7]/20 transition-colors"
+          type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </button>
 
-            document.addEventListener("mousemove", handleMouseMove);
-            return () => {
-                document.removeEventListener("mousemove", handleMouseMove);
-            };
+        <div
+          class="hidden absolute top-full left-4 right-4 z-50 lg:static lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 lg:flex-1 bg-[#0d0d1a] lg:bg-transparent border border-[#a855f7]/20 lg:border-none rounded-2xl lg:rounded-none p-5 lg:p-0 shadow-[0_10px_40px_rgba(124,58,237,.15)] lg:shadow-none"
+          id="navMenu">
+          <ul
+            class="flex flex-col lg:flex-row gap-2 lg:gap-1 list-none m-0 p-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#hero">Home</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#experience">Experience</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#skills">Skills</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#projects">Projects</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#education">Education</a></li>
+            <li><a
+                class="nav-link block w-full text-center lg:text-left text-xs uppercase tracking-widest text-[#8888bb] transition-colors duration-200 py-3 lg:py-2 px-3.5 relative group hover:text-[#c084fc] hover:bg-[#a855f7]/10 lg:hover:bg-transparent rounded-lg lg:rounded-none [&.active]:text-[#c084fc] after:content-[''] after:absolute after:bottom-1 after:inset-x-3.5 after:h-0.5 after:bg-[#a855f7] after:rounded-sm after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100 [&.active]:after:scale-x-100 no-underline"
+                href="#about">About</a></li>
+          </ul>
+          <div
+            class="flex flex-col sm:flex-row gap-3 mt-6 lg:mt-0 px-3.5 lg:px-0 lg:ml-auto shrink-0 mb-2 lg:mb-0 justify-center">
+            <a href="./assets/file/Resume.pdf" download
+              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-xs font-medium px-5 py-2 transition-all duration-200 hover:bg-[#a855f7]/10 hover:border-[#a855f7] cursor-pointer">Resume</a>
+            <a href="mailto:ehtesham.developer@gmail.com"
+              class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white border-0 rounded-full text-xs font-semibold px-5 py-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(168,85,247,.4)] cursor-pointer">Contact
+              Me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── HERO ────────────────────────────────────────────────────── -->
+    <section id="hero" class="min-h-screen relative z-10 flex items-center pt-20">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+
+          <!-- Left -->
+          <div class="w-full lg:w-1/2">
+            <div
+              class="inline-flex items-center gap-2 bg-gradient-to-br from-[#7c3aed]/15 to-[#a855f7]/10 border border-[#a855f7]/30 px-4 py-2 rounded-full text-xs text-[#c084fc] tracking-wide mb-6 animate-[fadeUp_.7s_ease_both]">
+              <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-[pulseDot_2s_ease_infinite]"></div>
+              Available for freelance
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tighter text-white animate-[fadeUp_.7s_ease_.1s_both]">
+              Hey, I'm<br>
+              <span
+                class="bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#e879f9] bg-clip-text text-transparent">Ehtesham
+                Alam</span>
+            </h1>
+            <div class="flex items-center gap-3 my-5 animate-[fadeUp_.7s_ease_.2s_both]">
+              <div class="h-px w-16 bg-gradient-to-r from-[#a855f7] to-transparent"></div>
+              <div
+                class="w-6 h-6 rounded-md bg-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center">
+                <svg width="10" height="10" viewBox="0 0 10 10">
+                  <circle cx="5" cy="5" r="3" fill="#a855f7" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-xl font-light text-[#8888bb] tracking-wide animate-[fadeUp_.7s_ease_.3s_both]">
+              <strong class="text-[#e8e8f8] font-bold">UI/UX Designer</strong> <span
+                class="text-amber-500 italic">&amp;</span> <strong class="text-[#e8e8f8] font-bold">Frontend
+                Developer</strong>
+            </p>
+            <p class="text-sm text-[#8888bb] leading-loose my-4 max-w-md animate-[fadeUp_.7s_ease_.4s_both]">
+              Crafting pixel-perfect digital experiences that blend aesthetics with functionality. From wireframes to
+              production-ready interfaces <br> — I bring ideas to life.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-2 animate-[fadeUp_.7s_ease_.5s_both]">
+              <a href="#about"
+                class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white font-semibold rounded-full text-sm px-8 py-3 transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(124,58,237,.45)] no-underline">Hire
+                Me</a>
+              <a href="#skills"
+                class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-sm font-medium px-7 py-3 transition-all duration-200 cursor-pointer hover:bg-[#a855f7]/10 hover:border-[#a855f7] no-underline">View
+                Skills</a>
+            </div>
+            <div
+              class="flex flex-wrap gap-5 sm:gap-9 mt-8 pt-7 border-t border-[#a855f7]/10 animate-[fadeUp_.7s_ease_.6s_both]">
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  4+</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Years Experience</div>
+              </div>
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  10+</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Projects Done</div>
+              </div>
+              <div>
+                <div
+                  class="text-3xl font-black bg-gradient-to-br from-[#a855f7] to-[#c084fc] bg-clip-text text-transparent leading-none">
+                  2</div>
+                <div class="text-[11px] text-[#5555a0] uppercase tracking-widest mt-1">Companies</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right – Avatar -->
+          <div class="w-full lg:w-1/2 flex justify-center mt-12 lg:mt-0">
+            <div class="relative w-64 h-80 md:w-[300px] md:h-[360px] mx-auto animate-[fadeIn_1s_ease_.3s_both]">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-ring-spin"></div>
+              <div
+                class="absolute bg-gradient-to-br from-[#7c3aed] to-[#a855f7] rounded-full px-3.5 py-2 text-[11px] font-bold text-white whitespace-nowrap shadow-[0_6px_24px_rgba(124,58,237,.5)] z-10">
+                ✦ 4+ Yrs Experience</div>
+              <div
+                class="absolute bg-[#0d0d1aeb] border border-[#a855f740] rounded-full px-3.5 py-2.5 backdrop-blur-md right-0 bottom-0 animate-[fadeUp_1s_ease_.6s_both]">
+                <!-- <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Status</div> -->
+                <div class="text-sm font-bold text-white flex items-center"><span
+                    class="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-2 animate-[pulseDot_2s_ease_infinite]"></span>Open to Work</div>
+              </div>
+
+              <!-- <div class="w-full h-full bg-gradient-to-br from-[#1a0a2e] via-[#0f0f2e] to-[#1a1040] rounded-[24px_6px_24px_6px] border border-[#a855f740] flex items-center justify-center overflow-hidden animate-[float_4s_ease-in-out_infinite]"> -->
+              <div
+                class="w-full h-full rounded-[24px_6px_24px_6px] border border-[#a855f740] flex items-center justify-center overflow-hidden">
+                <div class="h-full text-center p-8 pb-0">
+                  <img class="h-full" src="./assets/images/ehte.png" alt="profile image">
+                  <!-- <div
+                    class="w-32 h-32 rounded-full bg-gradient-to-br from-[#7c3aed]/30 to-[#a855f7]/15 border-2 border-[#a855f7]/45 flex items-center justify-center mx-auto mb-4 text-5xl">
+                    <svg width="64" height="76" viewBox="0 0 64 76" fill="none">
+                      <ellipse cx="32" cy="24" rx="17" ry="18" fill="rgba(168,85,247,0.25)"
+                        stroke="rgba(168,85,247,0.5)" stroke-width="1.5" />
+                      <ellipse cx="32" cy="64" rx="27" ry="18" fill="rgba(168,85,247,0.15)"
+                        stroke="rgba(168,85,247,0.3)" stroke-width="1.5" />
+                    </svg>
+                  </div>
+                  <div class="text-base font-bold text-white mb-1">Ehtesham Alam</div>
+                  <div class="text-xs text-[#c084fc] uppercase tracking-widest">UI/UX &amp; Frontend</div> -->
+                </div>
+              </div>
+
+              <!-- Social -->
+              <div class="flex absolute -right-7 top-1/2 -translate-y-1/2 flex-col gap-2.5">
+                <a href="https://www.linkedin.com/in/ehteshamalam"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.naukri.com/mnjuser/profile"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 49 49" fill="none">
+                    <path d="M31.0059 32.4635L30.9671 34.729L30.812 41.2566V41.5254C19.4516 31.9644 17.513 29.6221 17.2028 28.9309V28.8925C17.1641 28.7773 17.1641 28.6237 17.1641 28.4701C17.1641 28.4317 17.1641 28.3549 17.2028 28.3165C17.2028 28.2781 17.2416 28.2398 17.2416 28.2014C17.3579 27.8942 17.5518 27.587 17.7457 27.3566C17.9007 27.1646 18.0558 26.9726 18.2497 26.819C18.6374 26.4351 19.0639 26.0895 19.4904 25.7823C19.7231 25.6287 19.9557 25.4751 20.1883 25.2831C20.6536 24.9759 21.1576 24.6688 21.7005 24.3616C25.7716 28.0478 30.9671 32.3867 31.0059 32.4635Z" fill="currentColor"/>
+                    <path d="M31.0059 11.0735L30.9675 13.3459L30.9292 14.4629L30.8908 16.7354L30.8525 17.8909L30.8142 20.1633C30.7375 20.2019 25.5995 22.1662 21.6885 24.4772C21.1517 24.7853 20.6533 25.0934 20.1932 25.4016C19.9631 25.5556 19.733 25.7097 19.503 25.9023C19.0812 26.2104 18.6594 26.5571 18.276 26.9422C18.0843 27.1348 17.9309 27.2889 17.7775 27.4815C17.4325 27.9437 17.2024 28.3673 17.1641 28.791L17.2024 26.9037V26.5956V26.48L17.2407 25.286L17.3174 22.898L17.3558 21.7425L17.4325 19.393C18.2377 16.1191 29.6639 11.6127 31.0059 11.0735Z" fill="currentColor"/>
+                    <path d="M20.4861 13.8418C22.3359 13.8418 23.8081 12.3353 23.8081 10.5198C23.8081 8.66563 22.3359 7.19775 20.4861 7.19775C18.6363 7.19775 17.1641 8.70426 17.1641 10.5198C17.1641 12.3739 18.6363 13.8418 20.4861 13.8418Z" fill="currentColor"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_344_16" x1="28.5958" y1="35.9497" x2="15.5396" y2="20.4864" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.1" stop-color="white"/>
+                    <stop offset="1" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+                <a href="https://www.behance.net/ehteshamalam7"
+                  class="w-10 h-10 rounded-full bg-[#11112a] border border-[#a855f7]/30 flex items-center justify-center text-sm text-[#c084fc] hover:bg-[#a855f7] hover:text-white hover:scale-110 transition-all duration-200 no-underline"
+                  target="_blank"><i class="bi bi-behance"></i></a>
+              </div>
+
+              <!-- <div
+                class="absolute bg-[#0d0d1aeb] border border-[#a855f740] rounded-xl px-3.5 py-2.5 backdrop-blur-md top-5 right-0 md:-right-16 animate-[fadeUp_1s_ease_.8s_both]">
+                <div class="text-[10px] text-[#5555a0] uppercase tracking-wider mb-0.5">Latest Tool</div>
+                <div class="text-sm font-bold text-white">Figma ✦</div>
+              </div> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── EXPERIENCE ──────────────────────────────────────────────── -->
+    <section id="experience" class="py-16 md:py-24 relative z-10 w-full overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="text-right mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Work History</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Experience</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-7 relative overflow-hidden transition-all duration-300 h-full group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(124,58,237,.15)] before:content-[''] before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-gradient-to-r before:from-[#7c3aed] before:via-[#a855f7] before:to-[#c084fc] before:opacity-0 before:transition-opacity group-hover:before:opacity-100">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,.14),transparent)] pointer-events-none">
+              </div>
+              <div class="text-base font-bold text-[#c084fc] mb-2.5">Technoarray Web Solutions</div>
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span
+                  class="bg-[#a855f7]/10 text-[#c084fc] border border-[#a855f7]/20 text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Web
+                  Designer</span>
+                <span class="text-xs text-[#5555a0]">May 2022 – July 2024</span>
+              </div>
+              <ul class="text-sm space-y-4 mt-3.5">
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Designed and delivered 10+ responsive web interfaces using Figma, HTML, CSS, and Bootstrap.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Created wireframes, prototypes, and user flows to improve usability and user experience.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Collaborated with developers and stakeholders to align design with business and product goals.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Conducted usability testing and iterative improvements based on user feedback.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Ensured cross-browser compatibility and mobile responsiveness across all projects.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Followed modern UI/UX design principles and industry trends to enhance product quality.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.15s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-7 relative overflow-hidden transition-all duration-300 h-full group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(124,58,237,.15)] before:content-[''] before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-gradient-to-r before:from-[#7c3aed] before:via-[#a855f7] before:to-[#c084fc] before:opacity-0 before:transition-opacity group-hover:before:opacity-100">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,.14),transparent)] pointer-events-none">
+              </div>
+              <div class="text-base font-bold text-[#c084fc] mb-2.5">Anteriad</div>
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span
+                  class="bg-[#22c55e]/10 text-[#4ade80] border border-[#22c55e]/25 text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Web
+                  Designer · Active</span>
+                <span class="text-xs text-[#5555a0]">July 2024 – Present</span>
+              </div>
+              <ul class="text-sm space-y-4 mt-3.5">
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Designed and developed modern, accessible, and high-performance web interfaces using Figma, HTML, CSS, JavaScript, React.js, and Tailwind CSS.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Built scalable and reusable UI components with React.js and Tailwind, improving development speed and design consistency.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Designed UI/UX and developed frontend interfaces, coordinating with backend developers for API integration and data flow.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Translated UI/UX designs into clean, maintainable, and responsive frontend code.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Contributed to dashboard development, blog platforms, and resource-based websites with interactive and user-friendly interfaces.</span>
+                </li>
+                <li class="flex items-start gap-2 text-[#8888bb]">
+                  <i class="bi bi-check2-all"></i>
+                  <span>Ensured cross-browser compatibility, responsiveness, and accessibility (WCAG standards) across all applications.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── SKILLS ──────────────────────────────────────────────────── -->
+    <section id="skills" class="py-16 md:py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
+            What I Do</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Skills</div>
+        </div>
+
+        <div class="flex flex-wrap gap-1 mb-8 bg-[#0d0d1a] rounded-xl p-1.5 border border-[#a855f7]/10 w-fit reveal">
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)] active"
+            data-tab="ui">UI / UX</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="tools">Tools</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="ai">AI Tools</button>
+          <button
+            class="nav-stab px-6 py-2 rounded-lg text-xs font-medium text-[#8888bb] bg-transparent cursor-pointer transition-all tracking-wide hover:text-white [&.active]:bg-gradient-to-br [&.active]:from-[#7c3aed] [&.active]:to-[#a855f7] [&.active]:text-white [&.active]:shadow-[0_4px_14px_rgba(124,58,237,.4)]"
+            data-tab="frontend">Frontend</button>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── PORTFOLIO ───────────────────────────────────────────────── -->
+    <section id="projects" class="portfolio-section py-16 md:py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+
+        <!-- Header -->
+        <div class="text-right mb-10 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Selected Work</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent" style="-webkit-text-stroke:1px rgba(168,85,247,.22)">My</span> Projects</div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-track reveal" id="sliderTrack">
+
+          <!-- ── CARD 1 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(0)">
+              <div class="card-thumb bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/DashOrbit/thumbnail.webp">
+                </div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                UI/UX & React</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">DashOrbit</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designing intuitive and visually appealing web interfaces (UI/UX) and developing responsive web applications using React.js; implementing frontend functionality based on design.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">React.js</span><span class="tag">Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── The Sales Insights ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(1)">
+              <div class="card-thumb bg-gradient-to-br from-[#0f766e] via-[#115e59] to-[#134e4a]">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/TheSalesInsights/thumbnail.webp">
+                </div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Web Design</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">The Sales Insights</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed the UI/UX for The Sales Insights platform, creating a modern, intuitive, and seamless user experience.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">Web Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 2 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(2)">
+              <div class="card-thumb bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/AutofintechCRM/thumbnail.webp">
+                </div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Dashboard</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">CRM – AutoFintech</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">UI/UX</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 3 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(3)">
+              <div class="card-thumb bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/AutofintechHome/Thumbnail.webp">
+                </div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                Web Design</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">AutoFintech – Home</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 4 ── -->
+          <div class="slide-card">
+            <div class="project-card" onclick="openModal(4)">
+              <div class="card-thumb bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]">
+                <div class="card-thumb-placeholder"><img src="./assets/images/portfolioBanners/MotorGeniusWhiteLabelSite/thumbnail.webp">
+                </div>
+                <div class="card-overlay">
+                  <button class="overlay-btn">View Details</button>
+                </div>
+              </div>
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/10 text-white border border-white/20 z-10">
+                White Label</div>
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="text-sm font-bold text-white mb-1.5">MotorGenius – White Label Site</div>
+                <div class="text-xs text-[#8888bb] leading-relaxed flex-1">Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.</div>
+                <div class="flex gap-1.5 flex-wrap mt-3">
+                  <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /slider-track -->
+
+        <!-- Progress dots + arrow controls -->
+        <div class="flex items-center justify-between mt-5 reveal">
+          <div class="flex items-center gap-2" id="dots"></div>
+          <div class="flex items-center gap-3">
+            <button class="arrow-btn" id="prevBtn" onclick="slide(-1)">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="arrow-btn" id="nextBtn" onclick="slide(1)">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+        PROJECT DETAIL MODAL
+    ══════════════════════════════════════════════ -->
+    <div class="modal-backdrop" id="modalBackdrop" onclick="handleBackdropClick(event)">
+      <div class="modal-box" id="modalBox">
+        <button class="modal-close" onclick="closeModal()"><i class="bi bi-x-lg"></i></button>
+
+        <!-- Dynamic hero image / color -->
+        <div class="modal-hero" id="modalHero"></div>
+
+        <!-- Content -->
+        <div class="p-7 md:p-9">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+            <div>
+              <div class="text-[10px] uppercase tracking-widest text-[#c084fc] mb-1" id="modalCategory"></div>
+              <h2 class="text-2xl font-black text-white" id="modalTitle"></h2>
+              <div class="text-xs text-[#5555a0] mt-1" id="modalYear"></div>
+            </div>
+            <div class="flex gap-3">
+              <a id="modalLiveLink" href="#" target="_blank"
+                class="hidden text-xs font-semibold px-5 py-2 rounded-full bg-gradient-to-br from-[#7c3aed] to-[#a855f7] text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(124,58,237,.4)]">
+                <i class="bi bi-box-arrow-up-right mr-1"></i> Live Demo
+              </a>
+              <a id="modalFigmaLink" href="#" target="_blank"
+                class="hidden text-xs font-semibold px-5 py-2 rounded-full border border-[#a855f7]/40 text-[#c084fc] transition-all hover:bg-[#a855f7]/10">
+                <i class="bi bi-figma mr-1"></i> Figma
+              </a>
+            </div>
+          </div>
+
+          <!-- Tags row -->
+          <div class="flex flex-wrap gap-2 mb-6" id="modalTags"></div>
+
+          <!-- Description -->
+          <p class="text-sm text-[#8888bb] leading-loose mb-8" id="modalDesc"></p>
+
+          <!-- Highlights -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-8" id="modalHighlights"></div>
+
+          <!-- Image Gallery -->
+          <div id="gallerySection">
+            <div
+              class="text-xs uppercase tracking-widest text-[#c084fc] mb-4 flex items-center gap-2.5 before:content-[''] before:block before:w-5 before:h-px before:bg-[#a855f7]">
+              Screenshots</div>
+            <div class="img-gallery" id="modalGallery"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+        LIGHTBOX
+    ══════════════════════════════════════════════ -->
+    <div id="lightbox" class="lightbox" onclick="handleLbBackdrop(event)">
+
+      <!-- Top bar -->
+      <div class="lb-topbar">
+        <div class="lb-counter" id="lbCounter">1 / 6</div>
+        <button class="lb-close-btn" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <!-- Prev / Next -->
+      <button class="lb-arrow" id="lbPrev" onclick="lbNav(-1)"><i class="bi bi-chevron-left"></i></button>
+      <button class="lb-arrow" id="lbNext" onclick="lbNav(1)"><i class="bi bi-chevron-right"></i></button>
+
+      <!-- Main image -->
+      <div class="lightbox-img-wrap" id="lbImgWrap"></div>
+
+      <!-- Thumbnail strip -->
+      <div class="lb-strip" id="lbStrip"></div>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── EDUCATION ───────────────────────────────────────────────── -->
+    <section id="education" class="py-16 md:py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex items-center gap-2.5 before:content-[''] before:block before:w-6 before:h-px before:bg-[#a855f7]">
+            Academic Background</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight"><span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">My</span> Education</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 mt-2">
+          <div class="reveal">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-6 flex gap-4 items-start transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(124,58,237,.12)]">
+              <div
+                class="w-14 h-14 rounded-xl shrink-0 bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center text-2xl">
+                🎓</div>
+              <div>
+                <div class="text-base font-bold text-white mb-1">Bachelor of Technology (B.Tech.)</div>
+                <div class="text-sm text-[#c084fc] font-medium mb-1.5">RVSCET, Jamshedpur</div>
+                <div class="text-[11px] text-[#5555a0] flex items-center gap-1.5 mb-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c084fc]"></div>Sep 2019 – July 2022
+                </div>
+                <div class="text-xs text-[#8888bb] leading-relaxed">I have successfully completed a three-year full-time B.Tech. from RVS College of Engineering and Technology. There are no semester gaps in my academic record.</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.15s">
+            <div
+              class="bg-[#0d0d1a] border border-[#a855f7]/15 rounded-3xl p-6 flex gap-4 items-start transition-all duration-300 h-full hover:border-[#a855f7]/40 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(124,58,237,.12)]">
+              <div
+                class="w-14 h-14 rounded-xl shrink-0 bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center text-2xl">
+                💻</div>
+              <div>
+                <div class="text-base font-bold text-white mb-1">Diploma</div>
+                <div class="text-sm text-[#c084fc] font-medium mb-1.5">Al-Kabir Polytechnic, Jamshedpur</div>
+                <div class="text-[11px] text-[#5555a0] flex items-center gap-1.5 mb-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c084fc]"></div>Jul 2016 – Aug 2019
+                </div>
+                <div class="text-xs text-[#8888bb] leading-relaxed">I have successfully completed a three-year full-time Diploma from Al-Kabir Polytechnic. There are no semester gaps in my academic record.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── ABOUT ───────────────────────────────────────────────────── -->
+    <section id="about" class="py-16 md:py-24 relative z-10 overflow-hidden">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="text-right mb-12 reveal">
+          <div
+            class="text-[11px] uppercase tracking-widest text-[#c084fc] mb-2 flex flex-row-reverse items-center justify-start gap-2.5 after:content-[''] after:block after:w-6 after:h-px after:bg-[#a855f7]">
+            Who I Am</div>
+          <div class="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">About <span
+              class="text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,.22)]">Me</span></div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+
+          <!-- Visual -->
+          <div class="w-full lg:w-5/12 flex flex-col items-center reveal-left">
+            <div
+              class="w-72 h-72 rounded-full border border-[#a855f7]/20 flex items-center justify-center mx-auto relative animate-[spinSlow_30s_linear_infinite_reverse]">
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7] top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
+              </div>
+              <div
+                class="w-52 h-52 rounded-full bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f7]/35 flex items-center justify-center animate-[spinSlow_30s_linear_infinite]">
+                <div
+                  class="w-32 h-32 rounded-full bg-gradient-to-br from-[#2a1040] to-[#1a0a2e] border-2 border-[#a855f7]/50 flex items-center justify-center text-5xl">
+                  <!-- <svg width="56" height="68" viewBox="0 0 56 68" fill="none">
+                    <ellipse cx="28" cy="20" rx="14" ry="16" fill="rgba(168,85,247,0.3)" stroke="rgba(168,85,247,0.6)"
+                      stroke-width="1.5" />
+                    <ellipse cx="28" cy="58" rx="24" ry="16" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.35)"
+                      stroke-width="1.5" />
+                  </svg> -->
+                  <img src="./assets/images/favicon.png" alt="profile">
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-5 justify-center">
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Figma</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Adobe XD</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Photoshop</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Canva</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">HTML5</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">CSS3</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Bootstrap</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">Tailwind</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">React</span>
+              <span
+                class="px-3.5 py-1 rounded-full text-[11px] text-[#c084fc] border border-[#a855f740] bg-[#a855f7]/5">GitHub</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="w-full lg:w-7/12 reveal-right">
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">Hi, I'm <strong class="text-white">Ehtesham
+                Alam</strong> — a passionate UI/UX Designer and Frontend Developer based in India with 4+ years of
+              hands-on experience building user-centered digital products.</p>
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">I believe great design is more than aesthetics — it's
+              about solving real problems for real people. My approach combines rigorous research, thoughtful
+              wireframing, and pixel-perfect execution to deliver experiences that feel intuitive and look stunning.</p>
+            <p class="text-sm text-[#8888bb] leading-loose mb-4">When I'm not designing or coding, I explore new design
+              trends, contribute to open-source projects, and continuously sharpen my craft through learning and
+              experimentation.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div>
+                <div
+                  class=" h-full bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🎯</div>
+                  <div class="text-sm font-semibold text-white mb-1">User-Centered</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Every design decision is grounded in user
+                    needs and research.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class=" h-full bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">⚡</div>
+                  <div class="text-sm font-semibold text-white mb-1">Performance First</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Clean code and optimized layouts for fast,
+                    smooth experiences.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class=" h-full bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🤝</div>
+                  <div class="text-sm font-semibold text-white mb-1">Collaborative</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Love working with cross-functional teams to
+                    align on shared goals.</div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class=" h-full bg-[#0d0d1a] border border-[#a855f7]/10 rounded-xl p-5 transition-all duration-200 hover:border-[#a855f7]/35">
+                  <div class="text-2xl mb-2">🌱</div>
+                  <div class="text-sm font-semibold text-white mb-1">Always Learning</div>
+                  <div class="text-[11px] text-[#5555a0] leading-relaxed">Continuously exploring new tools, trends, and
+                    techniques.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-[#a855f7]/20 to-transparent"></div>
+
+    <!-- ── CONTACT BAR ─────────────────────────────────────────────── -->
+    <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3 py-16 md:py-24">
+      <div
+        class="bg-gradient-to-br from-[#7c3aed]/15 to-[#a855f7]/10 border border-[#a855f7]/20 rounded-3xl px-10 py-11 relative overflow-hidden reveal contact-bar">
+        <div class="flex flex-col lg:flex-row items-center gap-6 relative z-10">
+          <div class="w-full lg:w-2/3 text-center lg:text-left">
+            <div class="text-3xl font-extrabold text-white mb-1.5">Let's build something amazing together</div>
+            <div class="text-sm text-[#8888bb]">Available for freelance projects and full-time opportunities</div>
+          </div>
+          <div class="w-full lg:w-1/3 flex flex-wrap gap-4 justify-center lg:justify-end mt-4 lg:mt-0">
+            <a href="mailto:ehtesham.developer@gmail.com"
+              class="bg-gradient-to-br from-[#7c3aed] via-[#a855f7] to-[#c084fc] text-white rounded-full text-sm font-semibold px-7 py-3 transition-all cursor-pointer hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(124,58,237,.45)] whitespace-nowrap">Get
+              In Touch</a>
+            <a href="./assets/file/Resume.pdf" download
+              class="bg-transparent text-[#c084fc] border border-[#a855f7]/40 rounded-full text-sm font-medium px-7 py-3 transition-all cursor-pointer hover:bg-[#a855f7]/10 hover:border-[#a855f7] whitespace-nowrap">Download
+              CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+    <footer class="border-t border-[#a855f7]/10 py-6 relative z-10">
+      <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 md:px-3">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="md:w-1/4 text-center md:text-left">
+            <div class="text-center md:text-lef text-base font-black text-white italic tracking-wider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="125" height="21" viewBox="0 0 125 21" fill="none">
+                <path
+                  d="M0.1 0.399999H17.6V4.348H0.1V0.399999ZM0.1 8.24H17.6V12.16H0.1V8.24ZM0.184 16.052H17.6V20H0.184V16.052Z"
+                  fill="#c084fc"></path>
+                <path
+                  d="M20.6656 17.9C20.6656 16.584 21.7296 15.576 23.0176 15.576C24.3616 15.576 25.3696 16.584 25.3696 17.9C25.3696 19.244 24.3616 20.28 23.0176 20.28C21.7296 20.28 20.6656 19.244 20.6656 17.9ZM27.8935 20L37.3855 0.119999H42.1735L51.6375 20H46.6255L39.7655 5.72L32.9055 20H27.8935ZM54.2406 20V0.399999H58.9726V20H54.2406ZM62.6966 16.052H71.5166V20H62.6966V16.052ZM73.9951 20L83.4871 0.119999H88.2751L97.7391 20H92.7271L85.8671 5.72L79.0071 20H73.9951ZM100.342 20V0.399999H105.074L116.414 20H111.71L105.074 8.38V20H100.342ZM114.454 10.508L120.25 0.399999H124.982V20H120.25V8.38L116.834 14.344L114.454 10.508Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 text-center">
+            <div class="text-xs text-[#5555a0]">© 2026 Ehtesham Alam · Designed &amp; Built with passion</div>
+          </div>
+          <div class="w-full md:w-1/4 flex gap-4 justify-center md:justify-end">
+            <a href="https://www.linkedin.com/in/ehteshamalam" target="_blank"
+              class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">LinkedIn</a>
+            <a href="https://www.naukri.com/mnjuser/profile" target="_blank"
+              class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">Naukri</a>
+            <a href="https://www.behance.net/ehteshamalam7" target="_blank"
+              class="text-xs text-[#5555a0] no-underline transition-colors hover:text-[#c084fc]">Behance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    /* ── NAVBAR TOGGLER ─────────────────────────────────────────────── */
+    document.querySelector('.navbar-toggler').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('hidden');
+    });
+
+    /* ── AUTOCLOSE MOBILE MENU ──────────────────────────────────────── */
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          document.getElementById('navMenu').classList.add('hidden');
         }
-        document.addEventListener("DOMContentLoaded", () => {
-            const cleanup = initGradientFollow();
-            window.addEventListener("beforeunload", cleanup);
-        });
-    </script>
-    <script>
-        const tabs = document.querySelectorAll(".tab-btn");
-        const contents = document.querySelectorAll(".tab-content");
+      });
+    });
 
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                const target = tab.dataset.tab;
+    /* ── SKILL DATA ─────────────────────────────────────────────────── */
+    const skillData = {
+      tools: {
+        cards: [
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Figma">', name: 'Figma' },
+          { ico: '<img src="./assets/images/icons/frontend/ai-file.gif" class="w-8 h-8" alt="Adobe Illustrator">', name: 'Adobe Illustrator' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Photoshop">', name: 'Photoshop' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Adobe XD">', name: 'Adobe XD' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Canva">', name: 'Canva' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="VS Code">', name: 'VS Code' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="Sublime">', name: 'Sublime' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="GitHub">', name: 'GitHub' }
+        ]
+      },
+      ui: {
+        cards: [
+          { ico: '<img src="./assets/images/icons/ui-ux/wireframing.gif" class="w-8 h-8" alt="Wireframing">', name: 'Wireframing' },
+          { ico: '<img src="./assets/images/icons/ui-ux/prototyping.gif" class="w-8 h-8" alt="Prototyping">', name: 'Prototyping' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ab-testing.gif" class="w-8 h-8" alt="User Testing">', name: 'User Testing' },
+          { ico: '<img src="./assets/images/icons/ui-ux/mockup-design.gif" class="w-8 h-8" alt="Interaction Design">', name: 'Interaction Design' },
+          { ico: '<img src="./assets/images/icons/ui-ux/visual-design.gif" class="w-8 h-8" alt="Visual Design">', name: 'Visual Design' },
+          { ico: '<img src="./assets/images/icons/ui-ux/mobile-app-design.gif" class="w-8 h-8" alt="Accessibility">', name: 'Accessibility' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-8 h-8" alt="Design Systems">', name: 'Design Systems' },
+          { ico: '<img src="./assets/images/icons/ui-ux/ux-research.gif" class="w-8 h-8" alt="UX Research">', name: 'UX Research' }
+        ]
+      },
+      frontend: {
+        cards: [
+          { ico: '<img src="./assets/images/icons/frontend/html.gif" class="w-8 h-8" alt="HTML5">', name: 'HTML5' },
+          { ico: '<img src="./assets/images/icons/frontend/css.gif" class="w-8 h-8" alt="CSS3">', name: 'CSS3' },
+          { ico: '<img src="./assets/images/icons/frontend/bootstrap.gif" class="w-8 h-8" alt="Bootstrap">', name: 'Bootstrap' },
+          { ico: '<img src="./assets/images/icons/frontend/ai-file.gif" class="w-8 h-8" alt="Tailwind CSS">', name: 'Tailwind CSS' },
+          { ico: '<img src="./assets/images/icons/frontend/react.gif" class="w-8 h-8" alt="React">', name: 'React' }
+        ]
+      },
+      ai: {
+        cards: [
+          { ico: '🤖', name: 'ChatGPT' },
+          { ico: '🎨', name: 'Figma Make' },
+          { ico: '⚡', name: 'V0.dev' },
+          { ico: '❤️', name: 'Lovable' },
+          { ico: '🧠', name: 'Manus' },
+          { ico: '🚀', name: 'Grok' },
+          { ico: '🧵', name: 'Google Stitch' },
+          { ico: '⚙️', name: 'Figma MCP' }
+        ]
+      }
+    };
 
-                tabs.forEach(t => {
-                    t.classList.remove(
-                        "text-pink-500",
-                        "border-pink-500"
-                    );
-                    t.classList.add(
-                        "text-white",
-                        "border-transparent"
-                    );
-                });
+    function renderSkills(key) {
+      const d = skillData[key];
+      const grid = document.getElementById('skills-grid');
 
-                contents.forEach(c => c.classList.add("hidden"));
+      /* cards */
+      grid.innerHTML = d.cards.map(c => `
+    <div>
+      <div class="bg-[#0d0d1a] border border-[#a855f71f] rounded-2xl px-4 py-5 text-center transition-all duration-300 relative overflow-hidden group hover:border-[#a855f7]/50 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(124,58,237,.2)] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#a855f7]/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity">
+        <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-[#7c3aed]/20 to-[#a855f7]/10 border border-[#a855f740] flex items-center justify-center text-2xl relative z-10">${c.ico}</div>
+        <div class="text-xs text-[#8888bb] font-medium relative z-10">${c.name}</div>
+      </div>
+    </div>`).join('');
+    }
 
-                tab.classList.remove("text-white", "border-transparent");
-                tab.classList.add("text-pink-500", "border-pink-500");
+    document.querySelectorAll('.nav-stab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-stab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSkills(btn.dataset.tab);
+      });
+    });
 
-                document.getElementById(target).classList.remove("hidden");
-            });
-        });
-    </script>
-    <script>
-        document.querySelectorAll(".menu-items a[href^='#']").forEach(anchor => {
-            anchor.addEventListener("click", function (e) {
-                const href = this.getAttribute("href");
+    /* init */
+    renderSkills('ui');
 
-                // Ignore empty #
-                if (href === "#") return;
+    /* ── NAVBAR SCROLL ──────────────────────────────────────────────── */
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 60) {
+        nav.classList.remove('bg-transparent', 'py-3.5');
+        nav.classList.add('bg-[#060611]/95', 'py-2.5', 'shadow-md');
+      } else {
+        nav.classList.add('bg-transparent', 'py-3.5');
+        nav.classList.remove('bg-[#060611]/95', 'py-2.5', 'shadow-md');
+      }
 
-                e.preventDefault();
+      /* active link */
+      const sections = ['hero', 'experience', 'skills', 'projects', 'education', 'about'];
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
 
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                }
-            });
-        });
-    </script>
-    <script>
-        const slider = document.getElementById("slider");
-        const track = document.getElementById("scrollTrack");
-        const thumb = document.getElementById("scrollThumb");
-
-        let isDragging = false;
-        let grabOffset = 0;
-        let maxScroll;
-        let maxThumbMove;
-
-        function calculateSizes() {
-            maxScroll = slider.scrollWidth - slider.clientWidth;
-            maxThumbMove = track.clientWidth - thumb.clientWidth;
+    /* ── SCROLL REVEAL ──────────────────────────────────────────────── */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
         }
-        calculateSizes();
-        window.addEventListener("resize", calculateSizes);
+      });
+    }, { threshold: 0.1 });
 
-        /* Sync thumb when slider scrolls */
-        slider.addEventListener("scroll", () => {
-            if (isDragging) return;
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
 
-            const ratio = slider.scrollLeft / maxScroll;
-            thumb.style.transform =
-                `translateX(${ratio * maxThumbMove}px)`;
-        });
+  <script>
+    /* ══════════════════════════════════
+      PROJECT DATA – edit this to add
+      your own content, images, links
+    ══════════════════════════════════ */
+    const projects = [
+      {
+        title: "DashOrbit",
+        category: "UI/UX & React",
+        year: "2023",
+        gradient: "from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
+        bgClass: "bg-gradient-to-br from-[#0f1f5c] via-[#1e3a8a] to-[#1d4ed8]",
+        emoji: "<img src='./assets/images/portfolioBanners/DashOrbit/thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "React.js", "Responsive"],
+        desc: "Designing intuitive and visually appealing web interfaces (UI/UX) and developing responsive web applications using React.js; implementing frontend functionality based on design.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "15+" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "⚛️", label: "Framework", val: "React.js" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [
+          "./assets/images/portfolioBanners/DashOrbit/Signin page Super Admin Improvised.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Brand list.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Google Analytics.webp",
+          "./assets/images/portfolioBanners/DashOrbit/Wordpress.webp",
+          "./assets/images/portfolioBanners/DashOrbit/facebook Page Analytics.webp"
+        ]
+      },
+      {
+        title: "The Sales Insights",
+        category: "Web Design",
+        year: "2024",
+        bgClass: "bg-gradient-to-br from-[#0f766e] via-[#115e59] to-[#134e4a]",
+        emoji: "<img src='./assets/images/portfolioBanners/TheSalesInsights/thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "Web Design"],
+        desc: "Designed the UI/UX for The Sales Insights platform, creating a modern, intuitive, and seamless user experience.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "6" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [
+          "./assets/images/portfolioBanners/TheSalesInsights/Home Page.webp",
+          "./assets/images/portfolioBanners/TheSalesInsights/Blog Page.webp",
+          "./assets/images/portfolioBanners/TheSalesInsights/Blog Details Page.webp",
+          "./assets/images/portfolioBanners/TheSalesInsights/Resources Page.webp",
+          "./assets/images/portfolioBanners/TheSalesInsights/Resource Details Page.webp",
+          "./assets/images/portfolioBanners/TheSalesInsights/Author Page.webp"
+        ]
+      },
+      {
+        title: "CRM – AutoFintech",
+        category: "Dashboard",
+        year: "2023",
+        bgClass: "bg-gradient-to-br from-[#1a0a2e] via-[#3730a3] to-[#6d28d9]",
+        emoji: "<img src='./assets/images/portfolioBanners/AutofintechCRM/thumbnail.webp'>",
+        tags: ["UI/UX", "HTML/CSS", "Bootstrap"],
+        desc: "Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "5+" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "🛠️", label: "Framework", val: "Bootstrap" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [
+          "./assets/images/portfolioBanners/AutofintechCRM/Activity.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Approvals.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Send to Lender.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Summary.webp",
+          "./assets/images/portfolioBanners/AutofintechCRM/Task.webp"
+        ]
+      },
+      {
+        title: "AutoFintech – Home",
+        category: "Web Design",
+        year: "2024",
+        bgClass: "bg-gradient-to-br from-[#450a0a] via-[#991b1b] to-[#dc2626]",
+        emoji: "<img src='./assets/images/portfolioBanners/AutofintechHome/Thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "HTML/CSS", "Bootstrap"],
+        desc: "Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "3" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "🛠️", label: "Framework", val: "Bootstrap" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [
+          "./assets/images/portfolioBanners/AutofintechHome/Landing Page.webp",
+          "./assets/images/portfolioBanners/AutofintechHome/Cyber Essentials Certification.webp",
+          "./assets/images/portfolioBanners/AutofintechHome/News.webp"
+        ]
+      },
+      {
+        title: "MotorGenius – White Label Site",
+        category: "White Label",
+        year: "2024",
+        bgClass: "bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]",
+        emoji: "<img src='./assets/images/portfolioBanners/MotorGeniusWhiteLabelSite/thumbnail.webp'>",
+        tags: ["Figma", "UI/UX", "HTML/CSS", "Bootstrap"],
+        desc: "Designed UI/UX and developed responsive frontend components based on designs using HTML, CSS, and Bootstrap.",
+        highlights: [
+          { icon: "🖼️", label: "Screens", val: "3" },
+          { icon: "📱", label: "Responsive", val: "Yes" },
+          { icon: "🎨", label: "Design Tool", val: "Figma" },
+          { icon: "🛠️", label: "Framework", val: "Bootstrap" }
+        ],
+        liveLink: "",
+        figmaLink: "",
+        gallery: [
+          "./assets/images/portfolioBanners/MotorGeniusWhiteLabelSite/sun-homepage.webp",
+          "./assets/images/portfolioBanners/MotorGeniusWhiteLabelSite/Listingpage.webp",
+          "./assets/images/portfolioBanners/MotorGeniusWhiteLabelSite/details_page.webp"
+        ]
+      }
+    ];
 
-        /* DRAG START */
-        thumb.addEventListener("mousedown", (e) => {
-            isDragging = true;
+    /* ══════════════ SLIDER ══════════════ */
+    const track = document.getElementById('sliderTrack');
+    const dotsEl = document.getElementById('dots');
+    const total = projects.length;
+    let currentIndex = 0;
 
-            const thumbRect = thumb.getBoundingClientRect();
-            grabOffset = e.clientX - thumbRect.left; // 👈 store where inside thumb you grabbed
-        });
+    // Build dots
+    projects.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    });
 
-        /* DRAG END */
-        document.addEventListener("mouseup", () => {
-            isDragging = false;
-        });
+    function getVisibleCount() {
+      const w = window.innerWidth;
+      if (w >= 1024) return 3;
+      if (w >= 640) return 2;
+      return 1;
+    }
 
-        /* DRAG MOVE */
-        document.addEventListener("mousemove", (e) => {
-            if (!isDragging) return;
+    function goTo(index) {
+      currentIndex = Math.max(0, Math.min(index, total - 1));
+      const cards = track.querySelectorAll('.slide-card');
+      const cardWidth = cards[0].offsetWidth + 24; // gap=24
+      track.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+      updateUI();
+    }
 
-            const trackRect = track.getBoundingClientRect();
+    function slide(dir) { goTo(currentIndex + dir); }
 
-            let moveX = e.clientX - trackRect.left - grabOffset;
+    function updateUI() {
+      const vis = getVisibleCount();
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentIndex);
+      });
+      document.getElementById('prevBtn').disabled = currentIndex === 0;
+      document.getElementById('nextBtn').disabled = currentIndex >= total - vis;
+    }
 
-            moveX = Math.max(0, Math.min(moveX, maxThumbMove));
+    // Sync dots on manual scroll
+    track.addEventListener('scroll', () => {
+      const cards = track.querySelectorAll('.slide-card');
+      if (!cards.length) return;
+      const cardWidth = cards[0].offsetWidth + 24;
+      currentIndex = Math.round(track.scrollLeft / cardWidth);
+      updateUI();
+    });
 
-            const ratio = moveX / maxThumbMove;
-            slider.scrollLeft = ratio * maxScroll;
+    updateUI();
 
-            thumb.style.transform = `translateX(${moveX}px)`;
-        });
+    /* ══════════════ MODAL ══════════════ */
+    function openModal(idx) {
+      const p = projects[idx];
+      const backdrop = document.getElementById('modalBackdrop');
 
-        /* CLICK ON TRACK */
-        track.addEventListener("click", (e) => {
-            if (e.target === thumb) return;
+      // Hero
+      document.getElementById('modalHero').innerHTML = `
+        <div class="modal-hero-placeholder ${p.bgClass}">${p.emoji}</div>`;
 
-            const rect = track.getBoundingClientRect();
-            let clickX = e.clientX - rect.left - thumb.clientWidth / 2;
+      document.getElementById('modalCategory').textContent = p.category;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalYear').textContent = `Year: ${p.year}`;
 
-            clickX = Math.max(0, Math.min(clickX, maxThumbMove));
+      // Tags
+      document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
 
-            const ratio = clickX / maxThumbMove;
-            slider.scrollLeft = ratio * maxScroll;
-        });
-    </script>
+      // Description
+      document.getElementById('modalDesc').textContent = p.desc;
 
+      // Highlights
+      document.getElementById('modalHighlights').innerHTML = p.highlights.map(h => `
+        <div class="bg-[#060611] border border-[#a855f7]/10 rounded-xl p-4 text-center">
+          <div class="text-xl mb-1">${h.icon}</div>
+          <div class="text-base font-bold text-white">${h.val}</div>
+          <div class="text-[11px] text-[#5555a0] mt-0.5">${h.label}</div>
+        </div>`).join('');
 
+      // Links
+      const liveEl = document.getElementById('modalLiveLink');
+      const figmaEl = document.getElementById('modalFigmaLink');
+      if (p.liveLink) { liveEl.href = p.liveLink; liveEl.classList.remove('hidden'); }
+      else { liveEl.classList.add('hidden'); }
+      if (p.figmaLink) { figmaEl.href = p.figmaLink; figmaEl.classList.remove('hidden'); }
+      else { figmaEl.classList.add('hidden'); }
+
+      // Gallery — clicking a thumb opens lightbox
+      const galleryItems = p.gallery;
+      document.getElementById('modalGallery').innerHTML = galleryItems.map((src, i) =>
+        src
+          ? `<div class="img-thumb" onclick="openLightbox(${i})" title="Click to enlarge"><img src="${src}" alt="Screenshot ${i + 1}" loading="lazy" /><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:20px"></i></div></div>`
+          : `<div class="img-thumb placeholder" onclick="openLightbox(${i})" title="Click to enlarge" style="position:relative"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px" class="${p.bgClass} opacity-60"><span style="font-size:1.5rem">🖼️</span></div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:16px"></i></div></div>`
+      ).join('');
+
+      // Store current project gallery for lightbox
+      window._lbGallery = galleryItems;
+      window._lbBgClass = p.bgClass;
+
+      // hover effect for thumb-hover-icon
+      document.querySelectorAll('.img-thumb').forEach(el => {
+        el.addEventListener('mouseenter', () => { const ic = el.querySelector('.thumb-hover-icon'); if (ic) ic.style.opacity = '1'; });
+        el.addEventListener('mouseleave', () => { const ic = el.querySelector('.thumb-hover-icon'); if (ic) ic.style.opacity = '0'; });
+      });
+
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // Reset scroll
+      backdrop.scrollTop = 0;
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === document.getElementById('modalBackdrop')) closeModal();
+    }
+
+    // Close on Escape / arrow keys
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (lb.classList.contains('open')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+        return;
+      }
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ══════════════ LIGHTBOX ══════════════ */
+    let lbIndex = 0;
+
+    function openLightbox(startIdx) {
+      lbIndex = startIdx;
+      document.getElementById('lightbox').classList.remove('zoomed');
+      document.getElementById('lbImgWrap').classList.remove('zoomed');
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      // don't restore scroll — modal is still open
+    }
+
+    function lbNav(dir) {
+      const gallery = window._lbGallery || [];
+      lbIndex = (lbIndex + dir + gallery.length) % gallery.length;
+      document.getElementById('lightbox').classList.remove('zoomed');
+      document.getElementById('lbImgWrap').classList.remove('zoomed');
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      const gallery = window._lbGallery || [];
+      const bgClass = window._lbBgClass || '';
+      const src = gallery[lbIndex];
+      const total = gallery.length;
+
+      // Main image area
+      const imgWrap = document.getElementById('lbImgWrap');
+      if (src) {
+        imgWrap.innerHTML = `<img src="${src}" alt="Screenshot ${lbIndex + 1}" onclick="toggleZoom(event)" />`;
+      } else {
+        imgWrap.innerHTML = `<div class="lightbox-placeholder ${bgClass}">
+          <span>🖼️</span>
+          <span style="font-size:13px;color:rgba(168,85,247,0.7);font-weight:600;letter-spacing:.05em">Add your screenshot here</span>
+          <span style="font-size:11px;color:#5555a0">Update gallery[] in projects data</span>
+        </div>`;
+      }
+
+      // Counter
+      document.getElementById('lbCounter').textContent = `${lbIndex + 1} / ${total}`;
+
+      // Arrows
+      document.getElementById('lbPrev').classList.toggle('disabled', total <= 1);
+      document.getElementById('lbNext').classList.toggle('disabled', total <= 1);
+
+      // Thumbnail strip
+      document.getElementById('lbStrip').innerHTML = gallery.map((s, i) =>
+        s
+          ? `<div class="lb-thumb${i === lbIndex ? ' active' : ''}" onclick="lbNav(${i - lbIndex})"><img src="${s}" /></div>`
+          : `<div class="lb-thumb ph${i === lbIndex ? ' active' : ''} ${bgClass}" onclick="lbNav(${i - lbIndex})" style="opacity:${i === lbIndex ? 1 : 0.45}">🖼️</div>`
+      ).join('');
+    }
+
+    function toggleZoom(e) {
+      if (e) e.stopPropagation();
+      const lb = document.getElementById('lightbox');
+      const wrap = document.getElementById('lbImgWrap');
+      lb.classList.toggle('zoomed');
+      wrap.classList.toggle('zoomed');
+      if (lb.classList.contains('zoomed')) {
+        lb.scrollTop = 0;
+      }
+    }
+
+    /* ══════════════ REVEAL ══════════════ */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  </script>
+
+  <script>
+    function handleLbBackdrop(e) {
+      // close only if clicking the dark backdrop (not image/controls)
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+  </script>
 </body>
 
 </html>
