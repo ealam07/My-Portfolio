@@ -23,6 +23,8 @@
 <body
   class="font-['Inter'] bg-[#060611] text-[#e8e8f8] overflow-x-hidden relative w-full min-h-screen text-base max-w-[100vw]">
 
+  <div class="blob"></div>
+
   <!-- Main Wrapper to force no x-scroll on mobile -->
   <div class="w-full overflow-x-hidden relative">
 
@@ -1292,6 +1294,27 @@
       if (e.target === document.getElementById('lightbox')) closeLightbox();
     }
   </script>
+
+  <script>
+        function initGradientFollow() {
+            const blob = document.querySelector(".blob");
+            if (!blob) return;
+
+            const handleMouseMove = (e) => {
+                blob.style.left = `${e.clientX}px`;
+                blob.style.top = `${e.clientY}px`;
+            };
+
+            document.addEventListener("mousemove", handleMouseMove);
+            return () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+            };
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const cleanup = initGradientFollow();
+            window.addEventListener("beforeunload", cleanup);
+        });
+    </script>
 </body>
 
 </html>
