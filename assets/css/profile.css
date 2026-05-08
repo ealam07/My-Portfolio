@@ -785,3 +785,12 @@ html {
   transform: translate(calc(-50% + 15px), -50%);
   z-index: -1;
 }
+
+/* Hide scrollbar for elements with .no-scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
