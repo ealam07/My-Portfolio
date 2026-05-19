@@ -1202,11 +1202,17 @@
 
       // Gallery — clicking a thumb opens lightbox
       const galleryItems = p.gallery;
-      document.getElementById('modalGallery').innerHTML = galleryItems.map((src, i) =>
+      let galleryHTML = galleryItems.map((src, i) =>
         src
           ? `<div class="img-thumb" onclick="openLightbox(${i})" title="Click to enlarge"><img src="${src}" alt="Screenshot ${i + 1}" loading="lazy" /><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:20px"></i></div></div>`
           : `<div class="img-thumb placeholder" onclick="openLightbox(${i})" title="Click to enlarge" style="position:relative"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px" class="${p.bgClass} opacity-60"><span style="font-size:1.5rem">🖼️</span></div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;background:rgba(6,6,17,.45)" class="thumb-hover-icon"><i class="bi bi-arrows-fullscreen" style="color:#c084fc;font-size:16px"></i></div></div>`
       ).join('');
+
+      if (galleryItems.length > 0 && galleryItems.length % 3 !== 0) {
+        galleryHTML += `<div class="img-thumb" style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(168,85,247,0.03); border:1px dashed rgba(168,85,247,0.25); cursor:default; pointer-events:none;"><div style="font-size:1.4rem; margin-bottom:6px; opacity:0.8;">✨</div><div style="font-size:11px; color:#c084fc; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; text-align:center;">More Screens</div><div style="font-size:9px; color:#8888bb; text-align:center; margin-top:3px;">Available on request</div></div>`;
+      }
+
+      document.getElementById('modalGallery').innerHTML = galleryHTML;
 
       // Store current project gallery for lightbox
       window._lbGallery = galleryItems;
